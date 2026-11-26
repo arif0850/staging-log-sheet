@@ -13,8 +13,16 @@
 const DEFAULT_OWNER = 'arif0850';
 const DEFAULT_REPO = 'staging-log-sheet';
 const DEFAULT_BRANCH = 'main';
+const DEFAULT_SPREADSHEET_ID = '1HVJLz9_5P0B8x1KnxnLdx6QdNjohN6xcKOVEB5ECDhg';
 const SHEET_NOT_EXITED = 'Not Exited';
 const SHEET_SUMMARY = 'Summary';
+
+function getSpreadsheet() {
+  var active = SpreadsheetApp.getActiveSpreadsheet();
+  if (active) return active;
+  var id = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID') || DEFAULT_SPREADSHEET_ID;
+  return SpreadsheetApp.openById(id);
+}
 
 const HEADERS = [
   'sl',
@@ -78,7 +86,7 @@ function manualSync() {
 }
 
 function installTriggers() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = getSpreadsheet();
   const existing = ScriptApp.getProjectTriggers();
   existing.forEach(function (t) {
     if (t.getHandlerFunction() === 'onSheetChange') {
@@ -96,10 +104,13 @@ function installTriggers() {
     .onChange()
     .create();
 
-  SpreadsheetApp.getUi().alert(
-    '✅ Auto-Sync Triggers Enabled!\n\n' +
-    'Any new entry or modification in "' + SHEET_NOT_EXITED + '" or "' + SHEET_SUMMARY + '" will automatically push to GitHub.'
-  );
+  if (SpreadsheetApp.getActiveSpreadsheet()) {
+    SpreadsheetApp.getUi().alert(
+      '✅ Auto-Sync Triggers Enabled!\n\n' +
+      'Any new entry or modification in "' + SHEET_NOT_EXITED + '" or "' + SHEET_SUMMARY + '" will automatically push to GitHub.'
+    );
+  }
+  return 'Auto-Sync Triggers Enabled!';
 }
 
 function setupConfig(token, owner, repo, branch) {
@@ -167,7 +178,7 @@ function formatCellValue(val) {
 }
 
 function buildDataset(sourceLabel) {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = getSpreadsheet();
   const ws = ss.getSheetByName(SHEET_NOT_EXITED);
   if (!ws) throw new Error('Sheet "' + SHEET_NOT_EXITED + '" not found.');
 
@@ -552,7 +563,7 @@ function doPost(e) {
       return jsonOut(res);
     }
 
-    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var ss = getSpreadsheet();
     var ws = ss.getSheetByName(SHEET_NOT_EXITED);
 
     if (action === 'add' && body.entry) {
@@ -589,7 +600,7 @@ function bootstrapSheetFromGitHub() {
 
   var resp = UrlFetchApp.fetch(url);
   var data = JSON.parse(resp.getContentText());
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = getSpreadsheet();
   ss.rename('Staging_Not_Exited_26-11-2026');
 
   // 1. Setup "Not Exited" sheet
