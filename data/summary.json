@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
+    "subtitle": "Entries NOT yet exited  |  Renata PLC, Rajendrapur Potent Product Facility  |  Source: photographed log sheet pages  |  Prepared 26.11.2026",
+    "lastSyncedAt": "2026-11-26T10:29:42Z",
+    "totalEntries": 44,
+    "totalContainers": 229
+  },
+  "byProduct": [
+    {
+      "product": "Sukhi TP Tablet",
+      "entries": 12,
+      "containers": 61,
+      "expired": 0
+    },
+    {
+      "product": "NOR/EE Tablet",
+      "entries": 9,
+      "containers": 51,
+      "expired": 0
+    },
+    {
+      "product": "Levothyroxine Sodium 50mcg Tablet",
+      "entries": 8,
+      "containers": 56,
+      "expired": 0
+    },
+    {
+      "product": "Norgestrel 0.075mg Tablet",
+      "entries": 7,
+      "containers": 37,
+      "expired": 0
+    },
+    {
+      "product": "Hydrocortisone Tablets, USP 20mg",
+      "entries": 2,
+      "containers": 2,
+      "expired": 0
+    },
+    {
+      "product": "LEV/EE 5C Tablet",
+      "entries": 2,
+      "containers": 9,
+      "expired": 1
+    },
+    {
+      "product": "LEV/EE FC Tablet",
+      "entries": 1,
+      "containers": 1,
+      "expired": 0
+    },
+    {
+      "product": "Levonorgestrel 1.5mg Tablet",
+      "entries": 1,
+      "containers": 5,
+      "expired": 0
+    },
+    {
+      "product": "Placebo Film Coated Tablet",
+      "entries": 1,
+      "containers": 1,
+      "expired": 0
+    },
+    {
+      "product": "Placebo of LEV/EE 5C Tablet",
+      "entries": 1,
+      "containers": 6,
+      "expired": 1
+    }
+  ],
+  "total": {
+    "product": "TOTAL",
+    "entries": 44,
+    "containers": 229,
+    "expired": 2
+  },
+  "validityBreakdown": {
+    "Expired": 2,
+    "Valid": 39,
+    "N/A": 3
+  }
+}

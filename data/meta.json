@@ -1,0 +1,44 @@
+{
+  "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
+  "subtitle": "Entries NOT yet exited  |  Renata PLC, Rajendrapur Potent Product Facility  |  Source: photographed log sheet pages  |  Prepared 26.11.2026",
+  "facility": "Renata PLC, Rajendrapur Potent Product Facility",
+  "preparedDate": "26.11.2026",
+  "lastSyncedAt": "2026-11-26T10:29:42Z",
+  "source": "initial-xlsx-import",
+  "totalEntries": 44,
+  "totalContainers": 229,
+  "validityBreakdown": {
+    "Expired": 2,
+    "Valid": 39,
+    "N/A": 3
+  },
+  "headers": [
+    "SL",
+    "Page No.",
+    "Product Name",
+    "Batch No.",
+    "Item Description",
+    "Container ID(s)",
+    "No. of Containers",
+    "Staging Date",
+    "Staging Validity",
+    "Validity Status\n(as of 26.11.2026)",
+    "Days in Staging\n(as of 26.11.2026)",
+    "Exit Date",
+    "Remarks",
+    "Note",
+    "Source Photo"
+  ],
+  "endpoints": {
+    "all": "data/all.json",
+    "notExited": "data/not-exited.json",
+    "summary": "data/summary.json",
+    "expired": "data/expired.json",
+    "valid": "data/valid.json",
+    "na": "data/na.json",
+    "products": "data/products.json",
+    "meta": "data/meta.json",
+    "notExitedCsv": "data/not-exited.csv",
+    "summaryCsv": "data/summary.csv"
+  }
+}

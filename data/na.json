@@ -1,0 +1,67 @@
+{
+  "lastSyncedAt": "2026-11-26T10:29:42Z",
+  "status": "N/A",
+  "count": 3,
+  "entries": [
+    {
+      "sl": 2,
+      "pageNo": 12,
+      "productName": "Norgestrel 0.075mg Tablet",
+      "batchNo": "K0526063",
+      "itemDescription": "Compressed Tablet",
+      "containerIds": "IPC-209",
+      "noOfContainers": 1,
+      "stagingDate": "28.09.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 59,
+      "exitDate": null,
+      "remarks": "Sample for analysis purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_124503.jpg",
+      "containerIdList": [
+        "IPC-209"
+      ]
+    },
+    {
+      "sl": 12,
+      "pageNo": 68,
+      "productName": "Hydrocortisone Tablets, USP 20mg",
+      "batchNo": "K4526001",
+      "itemDescription": "Compressed Tablet",
+      "containerIds": "IPC-291",
+      "noOfContainers": 1,
+      "stagingDate": "15.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 11,
+      "exitDate": null,
+      "remarks": "Hold Time study purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_125303.jpg",
+      "containerIdList": [
+        "IPC-291"
+      ]
+    },
+    {
+      "sl": 14,
+      "pageNo": 70,
+      "productName": "Hydrocortisone Tablets, USP 20mg",
+      "batchNo": "K4526001",
+      "itemDescription": "Compressed Tablet",
+      "containerIds": "IPC-461",
+      "noOfContainers": 1,
+      "stagingDate": "16.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 10,
+      "exitDate": null,
+      "remarks": "Hold Time study purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_125337.jpg",
+      "containerIdList": [
+        "IPC-461"
+      ]
+    }
+  ]
+}

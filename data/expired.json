@@ -1,0 +1,54 @@
+{
+  "lastSyncedAt": "2026-11-26T10:29:42Z",
+  "status": "Expired",
+  "count": 2,
+  "entries": [
+    {
+      "sl": 1,
+      "pageNo": 36,
+      "productName": "Placebo of LEV/EE 5C Tablet",
+      "batchNo": "TK0226001",
+      "itemDescription": "Coated Tablet",
+      "containerIds": "IPC-086, IPC-132, IPC-228, IPC-249, IPC-556, IPC-560",
+      "noOfContainers": 6,
+      "stagingDate": "17.08.26",
+      "stagingValidity": "02.09.26",
+      "validityStatus": "Expired",
+      "daysInStaging": 101,
+      "exitDate": null,
+      "remarks": null,
+      "note": "1st staging date 16.08.26. Validity written as '2/9' in sheet.",
+      "sourcePhoto": "IMG_20261126_092308.jpg",
+      "containerIdList": [
+        "IPC-086",
+        "IPC-132",
+        "IPC-228",
+        "IPC-249",
+        "IPC-556",
+        "IPC-560"
+      ]
+    },
+    {
+      "sl": 35,
+      "pageNo": 85,
+      "productName": "LEV/EE 5C Tablet",
+      "batchNo": "K0226032",
+      "itemDescription": "Coated Tablet",
+      "containerIds": "IPC-150, IPC-439, IPC-458",
+      "noOfContainers": 3,
+      "stagingDate": "23.11.26",
+      "stagingValidity": "19.10.26",
+      "validityStatus": "Expired",
+      "daysInStaging": 3,
+      "exitDate": null,
+      "remarks": "Staged again after taking hold-time-over sample",
+      "note": "1st staging date 20.08.26.",
+      "sourcePhoto": "IMG_20261126_125526.jpg",
+      "containerIdList": [
+        "IPC-150",
+        "IPC-439",
+        "IPC-458"
+      ]
+    }
+  ]
+}
