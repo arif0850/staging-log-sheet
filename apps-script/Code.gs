@@ -576,3 +576,98 @@ function jsonOut(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj, null, 2))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
+/**
+ * One-time helper: populates the active Google Sheet from GitHub's data/all.json
+ * with both "Not Exited" and "Summary" tabs, headers, styling, and formulas.
+ */
+function bootstrapSheetFromGitHub() {
+  var owner = PropertiesService.getScriptProperties().getProperty('GITHUB_OWNER') || DEFAULT_OWNER;
+  var repo = PropertiesService.getScriptProperties().getProperty('GITHUB_REPO') || DEFAULT_REPO;
+  var branch = PropertiesService.getScriptProperties().getProperty('GITHUB_BRANCH') || DEFAULT_BRANCH;
+  var url = 'https://raw.githubusercontent.com/' + owner + '/' + repo + '/' + branch + '/data/all.json';
+
+  var resp = UrlFetchApp.fetch(url);
+  var data = JSON.parse(resp.getContentText());
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  ss.rename('Staging_Not_Exited_26-11-2026');
+
+  // 1. Setup "Not Exited" sheet
+  var ws = ss.getSheetByName(SHEET_NOT_EXITED) || ss.getSheets()[0];
+  ws.setName(SHEET_NOT_EXITED);
+  ws.clear();
+
+  var title = data.meta.title || 'Log Sheet for Staging Dispensed Material and Intermediate Product';
+  var subtitle = data.meta.subtitle || '';
+  var rawHeaders = data.meta.headers || HEADERS;
+
+  ws.getRange(1, 1).setValue(title).setFontWeight('bold').setFontSize(13);
+  ws.getRange(2, 1).setValue(subtitle).setFontColor('#555555').setFontSize(10);
+
+  var headerRange = ws.getRange(4, 1, 1, 15);
+  headerRange.setValues([rawHeaders.slice(0, 15)])
+    .setFontWeight('bold')
+    .setBackground('#1e293b')
+    .setFontColor('#ffffff')
+    .setWrap(true);
+
+  var rows = (data.entries || []).map(function (e) {
+    return HEADERS.map(function (k) {
+      return e[k] === null || e[k] === undefined ? '' : e[k];
+    });
+  });
+
+  if (rows.length > 0) {
+    ws.getRange(5, 1, rows.length, 15).setValues(rows);
+    // Color-code Validity Status column (col 10)
+    for (var i = 0; i < rows.length; i++) {
+      var st = String(rows[i][9] || '').toLowerCase();
+      var cell = ws.getRange(5 + i, 10);
+      if (st === 'expired') {
+        cell.setBackground('#fee2e2').setFontColor('#991b1b').setFontWeight('bold');
+      } else if (st === 'valid') {
+        cell.setBackground('#dcfce7').setFontColor('#166534').setFontWeight('bold');
+      } else if (st === 'n/a') {
+        cell.setBackground('#fef3c7').setFontColor('#92400e').setFontWeight('bold');
+      }
+    }
+  }
+  ws.setFrozenRows(4);
+  ws.autoResizeColumns(1, 15);
+
+  // 2. Setup "Summary" sheet
+  var wsSum = ss.getSheetByName(SHEET_SUMMARY) || ss.insertSheet(SHEET_SUMMARY);
+  wsSum.clear();
+  wsSum.getRange(1, 1).setValue('Summary — Entries Not Yet Exited').setFontWeight('bold').setFontSize(13);
+  wsSum.getRange(3, 1, 1, 4)
+    .setValues([['Product', 'Entries', 'Containers', 'Expired (past validity)']])
+    .setFontWeight('bold')
+    .setBackground('#1e293b')
+    .setFontColor('#ffffff');
+
+  var byProd = (data.summary && data.summary.byProduct) || [];
+  var sumRows = byProd.map(function (p) {
+    return [p.product, p.entries, p.containers, p.expired];
+  });
+  if (sumRows.length > 0) {
+    wsSum.getRange(4, 1, sumRows.length, 4).setValues(sumRows);
+  }
+  var totalRowIdx = 4 + sumRows.length;
+  var total = (data.summary && data.summary.total) || { product: 'TOTAL', entries: 0, containers: 0, expired: 0 };
+  wsSum.getRange(totalRowIdx, 1, 1, 4)
+    .setValues([[total.product, total.entries, total.containers, total.expired]])
+    .setFontWeight('bold')
+    .setBackground('#e2e8f0');
+
+  var vb = (data.meta && data.meta.validityBreakdown) || {};
+  var vbStart = totalRowIdx + 2;
+  wsSum.getRange(vbStart, 1).setValue('Validity Status').setFontWeight('bold');
+  wsSum.getRange(vbStart + 1, 1, 3, 2).setValues([
+    ['Expired', vb.Expired || 0],
+    ['Valid', vb.Valid || 0],
+    ['N/A', vb['N/A'] || 0]
+  ]);
+  wsSum.autoResizeColumns(1, 4);
+
+  return 'Bootstrapped ' + rows.length + ' entries into ' + ss.getName();
+}
