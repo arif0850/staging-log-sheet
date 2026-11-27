@@ -1,21 +1,22 @@
 {
   "meta": {
     "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
-    "subtitle": "Entries NOT yet exited  |  Rooms 115 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26.11.2026",
+    "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
     "facility": "Renata PLC, Rajendrapur Potent Product Facility",
-    "preparedDate": "26.11.2026",
-    "lastSyncedAt": "2026-11-27T05:17:20Z",
-    "source": "xlsx+camera-photos-room-126",
+    "preparedDate": "27.11.2026",
+    "lastSyncedAt": "2026-11-27T06:57:50Z",
+    "source": "xlsx+camera-photos-rooms-119-126",
     "rooms": [
       "115",
+      "119",
       "126"
     ],
-    "totalEntries": 60,
-    "totalContainers": 291,
+    "totalEntries": 73,
+    "totalContainers": 299,
     "validityBreakdown": {
       "Expired": 2,
-      "Valid": 50,
-      "N/A": 8
+      "Valid": 56,
+      "N/A": 15
     },
     "headers": [
       "SL",
@@ -28,8 +29,8 @@
       "No. of Containers",
       "Staging Date",
       "Staging Validity",
-      "Validity Status\n(as of 26.11.2026)",
-      "Days in Staging\n(as of 26.11.2026)",
+      "Validity Status\n(as of 26–27.11.2026)",
+      "Days in Staging\n(as of 26–27.11.2026)",
       "Exit Date",
       "Remarks",
       "Note",
@@ -44,20 +45,21 @@
       "na": "data/na.json",
       "products": "data/products.json",
       "rooms": "data/rooms.json",
-      "room115": "data/room-115.json",
-      "room126": "data/room-126.json",
       "meta": "data/meta.json",
       "notExitedCsv": "data/not-exited.csv",
-      "summaryCsv": "data/summary.csv"
+      "summaryCsv": "data/summary.csv",
+      "room115": "data/room-115.json",
+      "room119": "data/room-119.json",
+      "room126": "data/room-126.json"
     }
   },
   "summary": {
     "meta": {
       "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
-      "subtitle": "Entries NOT yet exited  |  Rooms 115 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26.11.2026",
-      "lastSyncedAt": "2026-11-27T05:17:20Z",
-      "totalEntries": 60,
-      "totalContainers": 291
+      "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
+      "lastSyncedAt": "2026-11-27T06:57:50Z",
+      "totalEntries": 73,
+      "totalContainers": 299
     },
     "byRoom": [
       {
@@ -67,6 +69,14 @@
         "valid": 39,
         "expired": 2,
         "na": 3
+      },
+      {
+        "stagingRoom": "119",
+        "entries": 13,
+        "containers": 8,
+        "valid": 6,
+        "expired": 0,
+        "na": 7
       },
       {
         "stagingRoom": "126",
@@ -80,14 +90,14 @@
     "byProduct": [
       {
         "product": "Sukhi TP Tablet",
-        "entries": 15,
-        "containers": 64,
+        "entries": 20,
+        "containers": 66,
         "expired": 0
       },
       {
         "product": "Levothyroxine Sodium 50mcg Tablet",
-        "entries": 12,
-        "containers": 84,
+        "entries": 16,
+        "containers": 88,
         "expired": 0
       },
       {
@@ -109,16 +119,16 @@
         "expired": 0
       },
       {
+        "product": "Hydrocortisone Tablets, USP 20mg",
+        "entries": 4,
+        "containers": 4,
+        "expired": 0
+      },
+      {
         "product": "LEV/EE 5C Tablet",
         "entries": 4,
         "containers": 16,
         "expired": 1
-      },
-      {
-        "product": "Hydrocortisone Tablets, USP 20mg",
-        "entries": 2,
-        "containers": 2,
-        "expired": 0
       },
       {
         "product": "LEV/EE FC Tablet",
@@ -143,18 +153,30 @@
         "entries": 1,
         "containers": 6,
         "expired": 1
+      },
+      {
+        "product": "Thyrox 25mcg Tabs. 3x30s",
+        "entries": 1,
+        "containers": 0,
+        "expired": 0
+      },
+      {
+        "product": "Thyrox 50mcg Tablet",
+        "entries": 1,
+        "containers": 0,
+        "expired": 0
       }
     ],
     "total": {
       "product": "TOTAL",
-      "entries": 60,
-      "containers": 291,
+      "entries": 73,
+      "containers": 299,
       "expired": 2
     },
     "validityBreakdown": {
       "Expired": 2,
-      "Valid": 50,
-      "N/A": 8
+      "Valid": 56,
+      "N/A": 15
     }
   },
   "entries": [
@@ -1648,6 +1670,269 @@
         "IPC-626",
         "IPC-766"
       ]
+    },
+    {
+      "sl": 61,
+      "stagingRoom": "119",
+      "pageNo": 14,
+      "productName": "Thyrox 25mcg Tabs. 3x30s",
+      "batchNo": "Z13260131",
+      "itemDescription": "PVDC Film 260 mm",
+      "containerIds": "N/A",
+      "noOfContainers": 0,
+      "stagingDate": "29.10.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 29,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123234.jpg",
+      "containerIdList": []
+    },
+    {
+      "sl": 62,
+      "stagingRoom": "119",
+      "pageNo": 75,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926107",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-096",
+      "noOfContainers": 1,
+      "stagingDate": "25.11.26",
+      "stagingValidity": "10.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 2,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123416.jpg",
+      "containerIdList": [
+        "EQ-PR-096"
+      ]
+    },
+    {
+      "sl": 63,
+      "stagingRoom": "119",
+      "pageNo": 76,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926108",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-095",
+      "noOfContainers": 1,
+      "stagingDate": "25.11.26",
+      "stagingValidity": "10.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 2,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123429.jpg",
+      "containerIdList": [
+        "EQ-PR-095"
+      ]
+    },
+    {
+      "sl": 64,
+      "stagingRoom": "119",
+      "pageNo": 76,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K18260331",
+      "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+      "containerIds": "N/A",
+      "noOfContainers": 0,
+      "stagingDate": "25.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 2,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123429.jpg",
+      "containerIdList": []
+    },
+    {
+      "sl": 65,
+      "stagingRoom": "119",
+      "pageNo": 77,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K18260341",
+      "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+      "containerIds": "N/A",
+      "noOfContainers": 0,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123441.jpg",
+      "containerIdList": []
+    },
+    {
+      "sl": 66,
+      "stagingRoom": "119",
+      "pageNo": 77,
+      "productName": "Hydrocortisone Tablets, USP 20mg",
+      "batchNo": "K4526001",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-204",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": "Stage again after 15 days hold time study sample",
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123441.jpg",
+      "containerIdList": [
+        "EQ-PR-204"
+      ]
+    },
+    {
+      "sl": 67,
+      "stagingRoom": "119",
+      "pageNo": 78,
+      "productName": "Hydrocortisone Tablets, USP 20mg",
+      "batchNo": "K4526002",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-202",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": "Stage again after 15 days Hold time study sample",
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123451.jpg",
+      "containerIdList": [
+        "EQ-PR-202"
+      ]
+    },
+    {
+      "sl": 68,
+      "stagingRoom": "119",
+      "pageNo": 78,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K1826045A",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-156",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123451.jpg",
+      "containerIdList": [
+        "EQ-PR-156"
+      ]
+    },
+    {
+      "sl": 69,
+      "stagingRoom": "119",
+      "pageNo": 78,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K18260351",
+      "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+      "containerIds": "N/A",
+      "noOfContainers": 0,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123451.jpg",
+      "containerIdList": []
+    },
+    {
+      "sl": 70,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926109",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-159",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-159"
+      ]
+    },
+    {
+      "sl": 71,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K1826045B",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-044",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-044"
+      ]
+    },
+    {
+      "sl": 72,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926110",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-153",
+      "noOfContainers": 1,
+      "stagingDate": "27.11.26",
+      "stagingValidity": "12.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 0,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-153"
+      ]
+    },
+    {
+      "sl": 73,
+      "stagingRoom": "119",
+      "pageNo": 87,
+      "productName": "Thyrox 50mcg Tablet",
+      "batchNo": "K09260851",
+      "itemDescription": "PVDC Film 260 mm and Printed foil 258 mm",
+      "containerIds": "N/A",
+      "noOfContainers": 0,
+      "stagingDate": "23.10.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 35,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123735.jpg",
+      "containerIdList": []
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
-    "subtitle": "Entries NOT yet exited  |  Rooms 115 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26.11.2026",
-    "lastSyncedAt": "2026-11-27T05:17:20Z",
-    "totalEntries": 60,
-    "totalContainers": 291
+    "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
+    "lastSyncedAt": "2026-11-27T06:57:50Z",
+    "totalEntries": 73,
+    "totalContainers": 299
   },
   "byRoom": [
     {
@@ -14,6 +14,14 @@
       "valid": 39,
       "expired": 2,
       "na": 3
+    },
+    {
+      "stagingRoom": "119",
+      "entries": 13,
+      "containers": 8,
+      "valid": 6,
+      "expired": 0,
+      "na": 7
     },
     {
       "stagingRoom": "126",
@@ -27,14 +35,14 @@
   "byProduct": [
     {
       "product": "Sukhi TP Tablet",
-      "entries": 15,
-      "containers": 64,
+      "entries": 20,
+      "containers": 66,
       "expired": 0
     },
     {
       "product": "Levothyroxine Sodium 50mcg Tablet",
-      "entries": 12,
-      "containers": 84,
+      "entries": 16,
+      "containers": 88,
       "expired": 0
     },
     {
@@ -56,16 +64,16 @@
       "expired": 0
     },
     {
+      "product": "Hydrocortisone Tablets, USP 20mg",
+      "entries": 4,
+      "containers": 4,
+      "expired": 0
+    },
+    {
       "product": "LEV/EE 5C Tablet",
       "entries": 4,
       "containers": 16,
       "expired": 1
-    },
-    {
-      "product": "Hydrocortisone Tablets, USP 20mg",
-      "entries": 2,
-      "containers": 2,
-      "expired": 0
     },
     {
       "product": "LEV/EE FC Tablet",
@@ -90,17 +98,29 @@
       "entries": 1,
       "containers": 6,
       "expired": 1
+    },
+    {
+      "product": "Thyrox 25mcg Tabs. 3x30s",
+      "entries": 1,
+      "containers": 0,
+      "expired": 0
+    },
+    {
+      "product": "Thyrox 50mcg Tablet",
+      "entries": 1,
+      "containers": 0,
+      "expired": 0
     }
   ],
   "total": {
     "product": "TOTAL",
-    "entries": 60,
-    "containers": 291,
+    "entries": 73,
+    "containers": 299,
     "expired": 2
   },
   "validityBreakdown": {
     "Expired": 2,
-    "Valid": 50,
-    "N/A": 8
+    "Valid": 56,
+    "N/A": 15
   }
 }

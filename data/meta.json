@@ -1,20 +1,21 @@
 {
   "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
-  "subtitle": "Entries NOT yet exited  |  Rooms 115 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26.11.2026",
+  "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
   "facility": "Renata PLC, Rajendrapur Potent Product Facility",
-  "preparedDate": "26.11.2026",
-  "lastSyncedAt": "2026-11-27T05:17:20Z",
-  "source": "xlsx+camera-photos-room-126",
+  "preparedDate": "27.11.2026",
+  "lastSyncedAt": "2026-11-27T06:57:50Z",
+  "source": "xlsx+camera-photos-rooms-119-126",
   "rooms": [
     "115",
+    "119",
     "126"
   ],
-  "totalEntries": 60,
-  "totalContainers": 291,
+  "totalEntries": 73,
+  "totalContainers": 299,
   "validityBreakdown": {
     "Expired": 2,
-    "Valid": 50,
-    "N/A": 8
+    "Valid": 56,
+    "N/A": 15
   },
   "headers": [
     "SL",
@@ -27,8 +28,8 @@
     "No. of Containers",
     "Staging Date",
     "Staging Validity",
-    "Validity Status\n(as of 26.11.2026)",
-    "Days in Staging\n(as of 26.11.2026)",
+    "Validity Status\n(as of 26–27.11.2026)",
+    "Days in Staging\n(as of 26–27.11.2026)",
     "Exit Date",
     "Remarks",
     "Note",
@@ -43,10 +44,11 @@
     "na": "data/na.json",
     "products": "data/products.json",
     "rooms": "data/rooms.json",
-    "room115": "data/room-115.json",
-    "room126": "data/room-126.json",
     "meta": "data/meta.json",
     "notExitedCsv": "data/not-exited.csv",
-    "summaryCsv": "data/summary.csv"
+    "summaryCsv": "data/summary.csv",
+    "room115": "data/room-115.json",
+    "room119": "data/room-119.json",
+    "room126": "data/room-126.json"
   }
 }

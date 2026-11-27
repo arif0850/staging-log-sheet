@@ -721,6 +721,8 @@ function bootstrapSheetFromGitHub() {
       var rmCell = ws.getRange(5 + i, 2);
       if (rm === '126') {
         rmCell.setBackground('#ede9fe').setFontColor('#5b21b6').setFontWeight('bold');
+      } else if (rm === '119') {
+        rmCell.setBackground('#ccfbf1').setFontColor('#115e59').setFontWeight('bold');
       } else if (rm === '115') {
         rmCell.setBackground('#e0f2fe').setFontColor('#075985').setFontWeight('bold');
       }
@@ -742,7 +744,8 @@ function bootstrapSheetFromGitHub() {
   // 2. Setup "Summary" sheet
   var wsSum = ss.getSheetByName(SHEET_SUMMARY) || ss.insertSheet(SHEET_SUMMARY);
   wsSum.clear();
-  wsSum.getRange(1, 1).setValue('Summary — Entries Not Yet Exited (Rooms 115 & 126)').setFontWeight('bold').setFontSize(13);
+  var roomLabel = ((data.meta && data.meta.rooms) || ['115', '119', '126']).join(', ');
+  wsSum.getRange(1, 1).setValue('Summary — Entries Not Yet Exited (Rooms ' + roomLabel + ')').setFontWeight('bold').setFontSize(13);
   wsSum.getRange(3, 1, 1, 4)
     .setValues([['Product', 'Entries', 'Containers', 'Expired (past validity)']])
     .setFontWeight('bold')

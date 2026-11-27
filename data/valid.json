@@ -1,7 +1,7 @@
 {
-  "lastSyncedAt": "2026-11-27T05:17:20Z",
+  "lastSyncedAt": "2026-11-27T06:57:50Z",
   "status": "Valid",
-  "count": 50,
+  "count": 56,
   "entries": [
     {
       "sl": 3,
@@ -1275,6 +1275,132 @@
         "IPC-592",
         "IPC-626",
         "IPC-766"
+      ]
+    },
+    {
+      "sl": 62,
+      "stagingRoom": "119",
+      "pageNo": 75,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926107",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-096",
+      "noOfContainers": 1,
+      "stagingDate": "25.11.26",
+      "stagingValidity": "10.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 2,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123416.jpg",
+      "containerIdList": [
+        "EQ-PR-096"
+      ]
+    },
+    {
+      "sl": 63,
+      "stagingRoom": "119",
+      "pageNo": 76,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926108",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-095",
+      "noOfContainers": 1,
+      "stagingDate": "25.11.26",
+      "stagingValidity": "10.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 2,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123429.jpg",
+      "containerIdList": [
+        "EQ-PR-095"
+      ]
+    },
+    {
+      "sl": 68,
+      "stagingRoom": "119",
+      "pageNo": 78,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K1826045A",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-156",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123451.jpg",
+      "containerIdList": [
+        "EQ-PR-156"
+      ]
+    },
+    {
+      "sl": 70,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926109",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-159",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-159"
+      ]
+    },
+    {
+      "sl": 71,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Sukhi TP Tablet",
+      "batchNo": "K1826045B",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-044",
+      "noOfContainers": 1,
+      "stagingDate": "26.11.26",
+      "stagingValidity": "11.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 1,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-044"
+      ]
+    },
+    {
+      "sl": 72,
+      "stagingRoom": "119",
+      "pageNo": 79,
+      "productName": "Levothyroxine Sodium 50mcg Tablet",
+      "batchNo": "K0926110",
+      "itemDescription": "Blend Granules",
+      "containerIds": "EQ-PR-153",
+      "noOfContainers": 1,
+      "stagingDate": "27.11.26",
+      "stagingValidity": "12.12.26",
+      "validityStatus": "Valid",
+      "daysInStaging": 0,
+      "exitDate": null,
+      "remarks": null,
+      "note": null,
+      "sourcePhoto": "IMG_20261127_123500.jpg",
+      "containerIdList": [
+        "EQ-PR-153"
       ]
     }
   ]
