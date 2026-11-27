@@ -125,7 +125,7 @@
         "expired": 0
       },
       {
-        "product": "LEV/EE 5C Tablet",
+        "product": "LEV/EE SC Tablet",
         "entries": 4,
         "containers": 16,
         "expired": 1
@@ -149,7 +149,7 @@
         "expired": 0
       },
       {
-        "product": "Placebo of LEV/EE 5C Tablet",
+        "product": "Placebo of LEV/EE SC Tablet",
         "entries": 1,
         "containers": 6,
         "expired": 1
@@ -184,7 +184,7 @@
       "sl": 1,
       "stagingRoom": "115",
       "pageNo": 36,
-      "productName": "Placebo of LEV/EE 5C Tablet",
+      "productName": "Placebo of LEV/EE SC Tablet",
       "batchNo": "TK0226001",
       "itemDescription": "Coated Tablet",
       "containerIds": "IPC-086, IPC-132, IPC-228, IPC-249, IPC-556, IPC-560",
@@ -364,7 +364,7 @@
       "sl": 8,
       "stagingRoom": "115",
       "pageNo": 59,
-      "productName": "LEV/EE 5C Tablet",
+      "productName": "LEV/EE SC Tablet",
       "batchNo": "K4626035",
       "itemDescription": "Coated Tablet",
       "containerIds": "IPC-029, IPC-036, IPC-063, IPC-352, IPC-493, IPC-535",
@@ -1044,7 +1044,7 @@
       "sl": 35,
       "stagingRoom": "115",
       "pageNo": 85,
-      "productName": "LEV/EE 5C Tablet",
+      "productName": "LEV/EE SC Tablet",
       "batchNo": "K0226032",
       "itemDescription": "Coated Tablet",
       "containerIds": "IPC-150, IPC-439, IPC-458",
@@ -1293,7 +1293,7 @@
       "sl": 45,
       "stagingRoom": "126",
       "pageNo": 31,
-      "productName": "LEV/EE 5C Tablet",
+      "productName": "LEV/EE SC Tablet",
       "batchNo": "K0226028",
       "itemDescription": "Blend Granules",
       "containerIds": "IPC-429",
@@ -1479,7 +1479,7 @@
       "sl": 53,
       "stagingRoom": "126",
       "pageNo": 31,
-      "productName": "LEV/EE 5C Tablet",
+      "productName": "LEV/EE SC Tablet",
       "batchNo": "K4626056",
       "itemDescription": "Coated Tablet",
       "containerIds": "IPC-111, IPC-321, IPC-423, IPC-501, IPC-544, IPC-734",

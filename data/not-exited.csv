@@ -1,12 +1,12 @@
 SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s),No. of Containers,Staging Date,Staging Validity,Validity Status (as of 26–27.11.2026),Days in Staging (as of 26–27.11.2026),Exit Date,Remarks,Note,Source Photo
-1,115,36,Placebo of LEV/EE 5C Tablet,TK0226001,Coated Tablet,"IPC-086, IPC-132, IPC-228, IPC-249, IPC-556, IPC-560",6,17.08.26,02.09.26,Expired,101,,,1st staging date 16.08.26. Validity written as '2/9' in sheet.,IMG_20261126_092308.jpg
+1,115,36,Placebo of LEV/EE SC Tablet,TK0226001,Coated Tablet,"IPC-086, IPC-132, IPC-228, IPC-249, IPC-556, IPC-560",6,17.08.26,02.09.26,Expired,101,,,1st staging date 16.08.26. Validity written as '2/9' in sheet.,IMG_20261126_092308.jpg
 2,115,12,Norgestrel 0.075mg Tablet,K0526063,Compressed Tablet,IPC-209,1,28.09.26,N/A,N/A,59,,Sample for analysis purpose,,IMG_20261126_124503.jpg
 3,115,25,Levonorgestrel 1.5mg Tablet,K0626007,Compressed Tablet,"IPC-263, IPC-481, IPC-456, IPC-543, IPC-712",5,14.10.26,13.12.26,Valid,43,,,,IMG_20261126_124605.jpg
 4,115,28,Levothyroxine Sodium 50mcg Tablet,K0926093,Compressed Tablet,"IPC-028, IPC-053, IPC-656, IPC-672, IPC-709, IPC-717, IPC-751",7,16.10.26,15.12.26,Valid,41,,,,IMG_20261126_124734.jpg
 5,115,28,Levothyroxine Sodium 50mcg Tablet,K0926094,Compressed Tablet,"IPC-027, IPC-165, IPC-384, IPC-499, IPC-525, IPC-655, IPC-702",7,17.10.26,16.12.26,Valid,40,,,,IMG_20261126_124734.jpg
 6,115,29,Levothyroxine Sodium 50mcg Tablet,K0926096,Compressed Tablet,"IPC-006, IPC-030, IPC-098, IPC-130, IPC-138, IPC-527, IPC-691",7,19.10.26,18.12.26,Valid,38,,,,IMG_20261126_124747.jpg
 7,115,30,Levothyroxine Sodium 50mcg Tablet,K0926097,Compressed Tablet,"IPC-208, IPC-320, IPC-326, IPC-330, IPC-538, IPC-567, IPC-732",7,19.10.26,18.12.26,Valid,38,,,,IMG_20261126_124755.jpg
-8,115,59,LEV/EE 5C Tablet,K4626035,Coated Tablet,"IPC-029, IPC-036, IPC-063, IPC-352, IPC-493, IPC-535",6,08.11.26,07.02.27,Valid,18,,,,IMG_20261126_124846.jpg
+8,115,59,LEV/EE SC Tablet,K4626035,Coated Tablet,"IPC-029, IPC-036, IPC-063, IPC-352, IPC-493, IPC-535",6,08.11.26,07.02.27,Valid,18,,,,IMG_20261126_124846.jpg
 9,115,65,Sukhi TP Tablet,K1826032B,Compressed Tablet,"IPC-363, IPC-519, IPC-616, IPC-623, IPC-669, IPC-674, IPC-796",7,12.11.26,10.02.27,Valid,14,,,,IMG_20261126_125234.jpg
 10,115,65,Sukhi TP Tablet,K1826033A,Compressed Tablet,"IPC-361, IPC-376, IPC-385, IPC-432, IPC-506, IPC-529, IPC-749",7,14.11.26,12.02.27,Valid,12,,,,IMG_20261126_125234.jpg
 11,115,67,Sukhi TP Tablet,K1826033B,Compressed Tablet,"IPC-002, IPC-061, IPC-305, IPC-336, IPC-618, IPC-629, IPC-738",7,15.11.26,13.02.27,Valid,11,,,,IMG_20261126_125252.jpg
@@ -33,7 +33,7 @@ SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s)
 32,115,84,Norgestrel 0.075mg Tablet,K0526107,Compressed Tablet,"IPC-055, IPC-152, IPC-199, IPC-414, IPC-653, IPC-763",6,22.11.26,20.02.27,Valid,4,,,,IMG_20261126_125519.jpg
 33,115,84,NOR/EE Tablet,K0326158,Compressed Tablet,"IPC-126, IPC-137, IPC-317, IPC-436, IPC-668, IPC-707, IPC-759",7,22.11.26,21.01.27,Valid,4,,,,IMG_20261126_125519.jpg
 34,115,85,Norgestrel 0.075mg Tablet,K0526108,Compressed Tablet,"IPC-015, IPC-038, IPC-207, IPC-318, IPC-372, IPC-520",6,22.11.26,20.02.27,Valid,4,,,,IMG_20261126_125526.jpg
-35,115,85,LEV/EE 5C Tablet,K0226032,Coated Tablet,"IPC-150, IPC-439, IPC-458",3,23.11.26,19.10.26,Expired,3,,Staged again after taking hold-time-over sample,1st staging date 20.08.26.,IMG_20261126_125526.jpg
+35,115,85,LEV/EE SC Tablet,K0226032,Coated Tablet,"IPC-150, IPC-439, IPC-458",3,23.11.26,19.10.26,Expired,3,,Staged again after taking hold-time-over sample,1st staging date 20.08.26.,IMG_20261126_125526.jpg
 36,115,86,Levothyroxine Sodium 50mcg Tablet,K0926100,Compressed Tablet,"IPC-204, IPC-236, IPC-303, IPC-368, IPC-545, IPC-606, IPC-768",7,24.11.26,23.01.27,Valid,2,,,,IMG_20261126_125532.jpg
 37,115,87,Levothyroxine Sodium 50mcg Tablet,K0926101,Compressed Tablet,"IPC-046, IPC-238, IPC-327, IPC-365, IPC-492, IPC-566, IPC-779",7,24.11.26,23.01.27,Valid,2,,,,IMG_20261126_125539.jpg
 38,115,88,Sukhi TP Tablet,K1826041B,Compressed Tablet,EQ-PR-037,1,25.11.26,23.02.27,Valid,1,,,,IMG_20261126_125544.jpg
@@ -43,7 +43,7 @@ SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s)
 42,115,90,Sukhi TP Tablet,K1826043A,Compressed Tablet,"IPC-602, IPC-110, IPC-196, IPC-680, IPC-695, IPC-701, IPC-788",7,25.11.26,23.02.27,Valid,1,,,,IMG_20261126_125555.jpg
 43,115,1,Levothyroxine Sodium 50mcg Tablet,K0926109,Compressed Tablet,"IPC-159, IPC-219, IPC-368, IPC-441, IPC-500, IPC-510, IPC-715",7,26.11.26,25.01.27,Valid,0,,,,IMG_20261126_125617.jpg
 44,115,90,Placebo Film Coated Tablet,K4726002,Coated Tablet,IPC-757,1,26.11.26,13.02.27,Valid,0,,Stability sample purpose,1st staging date 15.11.26.,IMG_20261126_125555.jpg
-45,126,31,LEV/EE 5C Tablet,K0226028,Blend Granules,IPC-429,1,17.07.26,N/A,N/A,132,,Sample for QC analysis purpose,,IMG_20261126_180203.jpg
+45,126,31,LEV/EE SC Tablet,K0226028,Blend Granules,IPC-429,1,17.07.26,N/A,N/A,132,,Sample for QC analysis purpose,,IMG_20261126_180203.jpg
 46,126,53,Placebo Film Coated Tablet,K1926015,Coated Tablet,IPC-558,1,03.08.26,N/A,N/A,115,,Hold Time Study Purpose,,IMG_20261126_180248.jpg
 47,126,54,Placebo Film Coated Tablet,K1926016,Coated Tablet,IPC-444,1,03.08.26,N/A,N/A,115,,Hold Time Study Purpose,,IMG_20261126_180302.jpg
 48,126,72,Placebo Film Coated Tablet,K1926015,Compressed Tablet,IPC-064,1,18.08.26,N/A,N/A,100,,Stage again after 15 days Hold time study sample,,IMG_20261126_180343.jpg
@@ -51,7 +51,7 @@ SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s)
 50,126,22,Levothyroxine Sodium 50mcg Tablet,K0926095,Compressed Tablet,"IPC-101, IPC-261, IPC-306, IPC-340, IPC-390, IPC-467, IPC-772",7,18.10.26,17.12.26,Valid,39,,,,IMG_20261126_180447.jpg
 51,126,23,Norethisterone 5mg Tablet,K0826057,Compressed Tablet,"IPC-059, IPC-070, IPC-145, IPC-174, IPC-472, IPC-475, IPC-559",7,18.10.26,17.12.26,Valid,39,,,,IMG_20261126_180454.jpg
 52,126,24,Levothyroxine Sodium 50mcg Tablet,K0926098,Compressed Tablet,"IPC-780, IPC-781, IPC-782, IPC-783, IPC-784, IPC-785, IPC-786",7,20.10.26,19.12.26,Valid,37,,,,IMG_20261126_180502.jpg
-53,126,31,LEV/EE 5C Tablet,K4626056,Coated Tablet,"IPC-111, IPC-321, IPC-423, IPC-501, IPC-544, IPC-734",6,09.11.26,08.01.27,Valid,17,,,,IMG_20261126_180528.jpg
+53,126,31,LEV/EE SC Tablet,K4626056,Coated Tablet,"IPC-111, IPC-321, IPC-423, IPC-501, IPC-544, IPC-734",6,09.11.26,08.01.27,Valid,17,,,,IMG_20261126_180528.jpg
 54,126,33,Sukhi TP Tablet,K1826031B,Compressed Tablet,EQ-PR-101,1,11.11.26,09.02.27,Valid,15,,,,IMG_20261126_180538.jpg
 55,126,34,Norgestrel 0.075mg Tablet,K0526102,Compressed Tablet,"IPC-128, IPC-133, IPC-163, IPC-177, IPC-316, IPC-379",6,11.11.26,09.02.27,Valid,15,,,,IMG_20261126_180547.jpg
 56,126,39,NOR/EE Tablet,K0326154,Compressed Tablet,"IPC-158, IPC-240, IPC-483, IPC-511, IPC-549, IPC-674, IPC-718",7,20.11.26,19.01.27,Valid,6,,,,IMG_20261126_180604.jpg
