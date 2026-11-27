@@ -9,9 +9,12 @@ Live dashboard and JSON/CSV endpoints for **Log Sheet for Staging Dispensed Mate
 
 | Endpoint | Description |
 | --- | --- |
-| `data/all.json` | Complete dataset (meta + summary + all entries) |
-| `data/not-exited.json` | All Not Exited entries |
-| `data/summary.json` | Product-wise & validity breakdown |
+| `data/all.json` | Complete dataset (meta + room & product summary + all entries) |
+| `data/not-exited.json` | All Not Exited entries (Rooms 115 & 126) |
+| `data/rooms.json` | Entries grouped by Staging Room (`115` & `126`) |
+| `data/room-115.json` | Only Staging Room 115 Not Exited entries |
+| `data/room-126.json` | Only Staging Room 126 Not Exited entries |
+| `data/summary.json` | Room-wise & product-wise summary + validity breakdown |
 | `data/expired.json` | Expired entries only |
 | `data/valid.json` | Valid entries only |
 | `data/na.json` | N/A validity entries only |

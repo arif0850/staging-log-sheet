@@ -317,6 +317,8 @@
     .badge-valid { background: rgba(34, 197, 94, 0.16); color: #4ade80; }
     .badge-expired { background: rgba(239, 68, 68, 0.18); color: #f87171; }
     .badge-na { background: rgba(245, 158, 11, 0.18); color: #fbbf24; }
+    .badge-room-115 { background: rgba(56, 189, 248, 0.16); color: #38bdf8; }
+    .badge-room-126 { background: rgba(167, 139, 250, 0.2); color: #c4b5fd; }
     .badge-get { background: rgba(56, 189, 248, 0.18); color: #38bdf8; font-family: var(--mono); }
     .badge-post { background: rgba(129, 140, 248, 0.2); color: #a5b4fc; font-family: var(--mono); }
 
@@ -482,7 +484,11 @@
         </div>
 
         <div class="pill-row">
-          <span style="font-size:0.78rem;color:var(--muted)">Status:</span>
+          <span style="font-size:0.78rem;color:var(--muted)">Room:</span>
+          <button class="pill active" data-room="" onclick="quickRoomFilter('')">All Rooms</button>
+          <button class="pill" data-room="115" onclick="quickRoomFilter('115')">Room 115</button>
+          <button class="pill" data-room="126" onclick="quickRoomFilter('126')">Room 126</button>
+          <span style="font-size:0.78rem;color:var(--muted);margin-left:10px">Status:</span>
           <button class="pill active" data-status="" onclick="quickStatusFilter('')">All</button>
           <button class="pill" data-status="Valid" onclick="quickStatusFilter('Valid')">Valid</button>
           <button class="pill" data-status="Expired" onclick="quickStatusFilter('Expired')">Expired</button>
@@ -500,6 +506,7 @@
               <tr>
                 <th style="width:28px"></th>
                 <th class="sortable sorted" data-key="sl" onclick="sortBy('sl')">SL ↑</th>
+                <th class="sortable" data-key="stagingRoom" onclick="sortBy('stagingRoom')">Room</th>
                 <th class="sortable" data-key="pageNo" onclick="sortBy('pageNo')">Page</th>
                 <th class="sortable" data-key="productName" onclick="sortBy('productName')">Product Name</th>
                 <th class="sortable" data-key="batchNo" onclick="sortBy('batchNo')">Batch No.</th>
@@ -518,8 +525,28 @@
       </div>
     </section>
 
-    <!-- TAB 2: INTERACTIVE PRODUCT SUMMARY -->
+    <!-- TAB 2: INTERACTIVE PRODUCT & ROOM SUMMARY -->
     <section id="tab-summary" class="panel">
+      <div class="card">
+        <h2>By Staging Room</h2>
+        <p class="subtitle" style="margin-bottom:12px">Click any room row to filter Product Info Rows to that staging room.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Staging Room</th>
+                <th>Entries</th>
+                <th>Containers</th>
+                <th>Valid</th>
+                <th>Expired</th>
+                <th>N/A</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="roomSummaryBody"></tbody>
+          </table>
+        </div>
+      </div>
       <div class="card">
         <h2>Product-wise Summary</h2>
         <p class="subtitle" style="margin-bottom:12px">Click any product row below to filter the Product Info table to that product.</p>
@@ -596,6 +623,7 @@
     const REPO_BRANCH = 'main';
 
     let appData = null;
+    let currentRoom = '';
     let currentStatus = '';
     let sortKey = 'sl';
     let sortAsc = true;
@@ -603,9 +631,12 @@
     let expandAllMode = false;
 
     const STATIC_ENDPOINTS = [
-      { method: 'GET', path: 'data/all.json', desc: 'Complete dataset: metadata, product summary, validity counts, and all entries.' },
-      { method: 'GET', path: 'data/not-exited.json', desc: 'All staging entries not yet exited with parsed containerIdList arrays.' },
-      { method: 'GET', path: 'data/summary.json', desc: 'Product-wise entry/container/expired counts and validity breakdown.' },
+      { method: 'GET', path: 'data/all.json', desc: 'Complete dataset: metadata, room & product summaries, validity counts, and all entries.' },
+      { method: 'GET', path: 'data/not-exited.json', desc: 'All staging entries not yet exited (Rooms 115 & 126) with parsed containerIdList.' },
+      { method: 'GET', path: 'data/rooms.json', desc: 'Entries grouped by Staging Room (115 & 126) with per-room stats.' },
+      { method: 'GET', path: 'data/room-115.json', desc: 'Only Staging Room 115 Not Exited entries.' },
+      { method: 'GET', path: 'data/room-126.json', desc: 'Only Staging Room 126 Not Exited entries.' },
+      { method: 'GET', path: 'data/summary.json', desc: 'Room-wise & product-wise entry/container/expired counts and validity breakdown.' },
       { method: 'GET', path: 'data/expired.json', desc: 'Filtered list of Expired entries (past staging validity).' },
       { method: 'GET', path: 'data/valid.json', desc: 'Filtered list of Valid entries within staging validity.' },
       { method: 'GET', path: 'data/na.json', desc: 'Entries with Validity Status = N/A (hold time / analysis samples).' },
@@ -617,15 +648,18 @@
 
     const GAS_ENDPOINTS = [
       { method: 'GET', query: '?endpoint=all', desc: 'Live full dataset directly from Google Sheets.' },
-      { method: 'GET', query: '?endpoint=not-exited', desc: 'Live Not Exited entries.' },
+      { method: 'GET', query: '?endpoint=not-exited', desc: 'Live Not Exited entries (all rooms).' },
+      { method: 'GET', query: '?endpoint=not-exited&room=126', desc: 'Filter live entries by Staging Room (115 | 126).' },
       { method: 'GET', query: '?endpoint=not-exited&status=Expired', desc: 'Filter live entries by status (Valid | Expired | N/A).' },
-      { method: 'GET', query: '?endpoint=summary', desc: 'Live product & validity summary.' },
+      { method: 'GET', query: '?endpoint=rooms', desc: 'Live entries grouped by Staging Room.' },
+      { method: 'GET', query: '?endpoint=room&room=126', desc: 'Live entries for a single Staging Room.' },
+      { method: 'GET', query: '?endpoint=summary', desc: 'Live room, product & validity summary.' },
       { method: 'GET', query: '?endpoint=expired', desc: 'Live expired entries.' },
       { method: 'GET', query: '?endpoint=valid', desc: 'Live valid entries.' },
       { method: 'GET', query: '?endpoint=na', desc: 'Live N/A entries.' },
       { method: 'GET', query: '?endpoint=products', desc: 'Live entries grouped by product.' },
       { method: 'GET', query: '?endpoint=search&q=Sukhi', desc: 'Full-text search across all columns.' },
-      { method: 'GET', query: '?endpoint=batch&batch=K0926093', desc: 'Lookup entries by exact Batch No.' },
+      { method: 'GET', query: '?endpoint=batch&batch=K0926095', desc: 'Lookup entries by exact Batch No.' },
       { method: 'GET', query: '?endpoint=container&id=IPC-086', desc: 'Lookup entries containing a specific Container ID.' },
       { method: 'GET', query: '?endpoint=meta', desc: 'Live spreadsheet metadata & totals.' },
       { method: 'GET', query: '?endpoint=not-exited&format=csv', desc: 'Live CSV export from Google Sheets.' },
@@ -731,6 +765,15 @@
       }
     }
 
+    function quickRoomFilter(room) {
+      currentRoom = room;
+      document.querySelectorAll('.pill[data-room]').forEach(p => {
+        p.className = 'pill' + (p.dataset.room === room ? ' active' : '');
+      });
+      switchTab('entries', document.getElementById('tabBtn-entries'));
+      renderTable();
+    }
+
     function quickStatusFilter(status) {
       currentStatus = status;
       // Highlight pills
@@ -770,6 +813,10 @@
     function resetFilters() {
       document.getElementById('searchInput').value = '';
       document.getElementById('productFilter').value = '';
+      currentRoom = '';
+      document.querySelectorAll('.pill[data-room]').forEach(p => {
+        p.className = 'pill' + (p.dataset.room === '' ? ' active' : '');
+      });
       quickStatusFilter('');
     }
 
@@ -799,6 +846,7 @@
       const prod = document.getElementById('productFilter').value;
 
       const filtered = appData.entries.filter(e => {
+        if (currentRoom && String(e.stagingRoom || '') !== currentRoom) return false;
         if (currentStatus && e.validityStatus !== currentStatus) return false;
         if (prod && e.productName !== prod) return false;
         if (q && !JSON.stringify(e).toLowerCase().includes(q)) return false;
@@ -850,7 +898,7 @@
 
       if (rows.length === 0) {
         document.getElementById('entriesBody').innerHTML =
-          `<tr><td colspan="12" style="text-align:center;padding:28px;color:var(--muted)">No matching staging entries found.</td></tr>`;
+          `<tr><td colspan="13" style="text-align:center;padding:28px;color:var(--muted)">No matching staging entries found.</td></tr>`;
         return;
       }
 
@@ -859,6 +907,8 @@
         const isOpen = expandedRows.has(key);
         const status = e.validityStatus || '';
         const badgeCls = status === 'Valid' ? 'badge-valid' : status === 'Expired' ? 'badge-expired' : 'badge-na';
+        const room = String(e.stagingRoom || '115');
+        const roomCls = room === '126' ? 'badge-room-126' : 'badge-room-115';
         const cids = e.containerIdList && e.containerIdList.length
           ? e.containerIdList
           : (e.containerIds ? String(e.containerIds).split(',').map(s => s.trim()).filter(Boolean) : []);
@@ -867,6 +917,7 @@
           <tr class="data-row ${isOpen ? 'expanded' : ''}" data-key="${escapeHtml(key)}" onclick="toggleRow(this.dataset.key)">
             <td><span class="chevron">▶</span></td>
             <td>${e.sl ?? ''}</td>
+            <td><span class="badge ${roomCls}">Rm ${escapeHtml(room)}</span></td>
             <td>${e.pageNo ?? ''}</td>
             <td><strong>${escapeHtml(e.productName || '')}</strong></td>
             <td><code>${escapeHtml(e.batchNo || '')}</code></td>
@@ -887,12 +938,16 @@
 
           out += `
             <tr class="detail-row">
-              <td colspan="12">
+              <td colspan="13">
                 <div class="detail-box" onclick="event.stopPropagation()">
                   <div class="detail-grid">
                     <div>
                       <div class="detail-field-label">Product Name</div>
                       <div class="detail-field-val"><strong>${escapeHtml(e.productName || '—')}</strong></div>
+                    </div>
+                    <div>
+                      <div class="detail-field-label">Staging Room</div>
+                      <div class="detail-field-val"><span class="badge ${roomCls}">Room ${escapeHtml(room)}</span></div>
                     </div>
                     <div>
                       <div class="detail-field-label">Batch No.</div>
@@ -971,6 +1026,19 @@
 
     function renderSummary() {
       if (!appData || !appData.summary) return;
+      const rooms = appData.summary.byRoom || [];
+      document.getElementById('roomSummaryBody').innerHTML = rooms.map(r => `
+        <tr class="data-row" data-room="${escapeHtml(r.stagingRoom)}" onclick="quickRoomFilter(this.dataset.room)">
+          <td><strong>Room ${escapeHtml(r.stagingRoom)}</strong></td>
+          <td>${r.entries}</td>
+          <td>${r.containers}</td>
+          <td><span class="badge badge-valid">${r.valid}</span></td>
+          <td>${r.expired > 0 ? `<span class="badge badge-expired">${r.expired}</span>` : '0'}</td>
+          <td><span class="badge badge-na">${r.na}</span></td>
+          <td><button class="btn btn-sm">View Room →</button></td>
+        </tr>
+      `).join('');
+
       const list = appData.summary.byProduct || [];
       const total = appData.summary.total;
       let html = list.map(p => `

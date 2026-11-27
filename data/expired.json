@@ -1,10 +1,11 @@
 {
-  "lastSyncedAt": "2026-11-26T10:29:42Z",
+  "lastSyncedAt": "2026-11-27T05:17:20Z",
   "status": "Expired",
   "count": 2,
   "entries": [
     {
       "sl": 1,
+      "stagingRoom": "115",
       "pageNo": 36,
       "productName": "Placebo of LEV/EE 5C Tablet",
       "batchNo": "TK0226001",
@@ -30,6 +31,7 @@
     },
     {
       "sl": 35,
+      "stagingRoom": "115",
       "pageNo": 85,
       "productName": "LEV/EE 5C Tablet",
       "batchNo": "K0226032",

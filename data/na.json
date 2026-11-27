@@ -1,10 +1,11 @@
 {
-  "lastSyncedAt": "2026-11-26T10:29:42Z",
+  "lastSyncedAt": "2026-11-27T05:17:20Z",
   "status": "N/A",
-  "count": 3,
+  "count": 8,
   "entries": [
     {
       "sl": 2,
+      "stagingRoom": "115",
       "pageNo": 12,
       "productName": "Norgestrel 0.075mg Tablet",
       "batchNo": "K0526063",
@@ -25,6 +26,7 @@
     },
     {
       "sl": 12,
+      "stagingRoom": "115",
       "pageNo": 68,
       "productName": "Hydrocortisone Tablets, USP 20mg",
       "batchNo": "K4526001",
@@ -45,6 +47,7 @@
     },
     {
       "sl": 14,
+      "stagingRoom": "115",
       "pageNo": 70,
       "productName": "Hydrocortisone Tablets, USP 20mg",
       "batchNo": "K4526001",
@@ -61,6 +64,111 @@
       "sourcePhoto": "IMG_20261126_125337.jpg",
       "containerIdList": [
         "IPC-461"
+      ]
+    },
+    {
+      "sl": 45,
+      "stagingRoom": "126",
+      "pageNo": 31,
+      "productName": "LEV/EE 5C Tablet",
+      "batchNo": "K0226028",
+      "itemDescription": "Blend Granules",
+      "containerIds": "IPC-429",
+      "noOfContainers": 1,
+      "stagingDate": "17.07.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 132,
+      "exitDate": null,
+      "remarks": "Sample for QC analysis purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_180203.jpg",
+      "containerIdList": [
+        "IPC-429"
+      ]
+    },
+    {
+      "sl": 46,
+      "stagingRoom": "126",
+      "pageNo": 53,
+      "productName": "Placebo Film Coated Tablet",
+      "batchNo": "K1926015",
+      "itemDescription": "Coated Tablet",
+      "containerIds": "IPC-558",
+      "noOfContainers": 1,
+      "stagingDate": "03.08.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 115,
+      "exitDate": null,
+      "remarks": "Hold Time Study Purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_180248.jpg",
+      "containerIdList": [
+        "IPC-558"
+      ]
+    },
+    {
+      "sl": 47,
+      "stagingRoom": "126",
+      "pageNo": 54,
+      "productName": "Placebo Film Coated Tablet",
+      "batchNo": "K1926016",
+      "itemDescription": "Coated Tablet",
+      "containerIds": "IPC-444",
+      "noOfContainers": 1,
+      "stagingDate": "03.08.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 115,
+      "exitDate": null,
+      "remarks": "Hold Time Study Purpose",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_180302.jpg",
+      "containerIdList": [
+        "IPC-444"
+      ]
+    },
+    {
+      "sl": 48,
+      "stagingRoom": "126",
+      "pageNo": 72,
+      "productName": "Placebo Film Coated Tablet",
+      "batchNo": "K1926015",
+      "itemDescription": "Compressed Tablet",
+      "containerIds": "IPC-064",
+      "noOfContainers": 1,
+      "stagingDate": "18.08.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 100,
+      "exitDate": null,
+      "remarks": "Stage again after 15 days Hold time study sample",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_180343.jpg",
+      "containerIdList": [
+        "IPC-064"
+      ]
+    },
+    {
+      "sl": 49,
+      "stagingRoom": "126",
+      "pageNo": 72,
+      "productName": "Placebo Film Coated Tablet",
+      "batchNo": "K1926016",
+      "itemDescription": "Compressed Tablet",
+      "containerIds": "IPC-504",
+      "noOfContainers": 1,
+      "stagingDate": "18.08.26",
+      "stagingValidity": "N/A",
+      "validityStatus": "N/A",
+      "daysInStaging": 100,
+      "exitDate": null,
+      "remarks": "Stage again after 15 days Hold Time study sample",
+      "note": null,
+      "sourcePhoto": "IMG_20261126_180343.jpg",
+      "containerIdList": [
+        "IPC-504"
       ]
     }
   ]

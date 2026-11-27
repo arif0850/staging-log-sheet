@@ -1,47 +1,71 @@
 {
   "meta": {
     "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
-    "subtitle": "Entries NOT yet exited  |  Renata PLC, Rajendrapur Potent Product Facility  |  Source: photographed log sheet pages  |  Prepared 26.11.2026",
-    "lastSyncedAt": "2026-11-26T10:29:42Z",
-    "totalEntries": 44,
-    "totalContainers": 229
+    "subtitle": "Entries NOT yet exited  |  Rooms 115 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26.11.2026",
+    "lastSyncedAt": "2026-11-27T05:17:20Z",
+    "totalEntries": 60,
+    "totalContainers": 291
   },
+  "byRoom": [
+    {
+      "stagingRoom": "115",
+      "entries": 44,
+      "containers": 229,
+      "valid": 39,
+      "expired": 2,
+      "na": 3
+    },
+    {
+      "stagingRoom": "126",
+      "entries": 16,
+      "containers": 62,
+      "valid": 11,
+      "expired": 0,
+      "na": 5
+    }
+  ],
   "byProduct": [
     {
       "product": "Sukhi TP Tablet",
-      "entries": 12,
-      "containers": 61,
-      "expired": 0
-    },
-    {
-      "product": "NOR/EE Tablet",
-      "entries": 9,
-      "containers": 51,
+      "entries": 15,
+      "containers": 64,
       "expired": 0
     },
     {
       "product": "Levothyroxine Sodium 50mcg Tablet",
-      "entries": 8,
-      "containers": 56,
+      "entries": 12,
+      "containers": 84,
+      "expired": 0
+    },
+    {
+      "product": "NOR/EE Tablet",
+      "entries": 10,
+      "containers": 58,
       "expired": 0
     },
     {
       "product": "Norgestrel 0.075mg Tablet",
-      "entries": 7,
-      "containers": 37,
+      "entries": 8,
+      "containers": 43,
       "expired": 0
+    },
+    {
+      "product": "Placebo Film Coated Tablet",
+      "entries": 5,
+      "containers": 5,
+      "expired": 0
+    },
+    {
+      "product": "LEV/EE 5C Tablet",
+      "entries": 4,
+      "containers": 16,
+      "expired": 1
     },
     {
       "product": "Hydrocortisone Tablets, USP 20mg",
       "entries": 2,
       "containers": 2,
       "expired": 0
-    },
-    {
-      "product": "LEV/EE 5C Tablet",
-      "entries": 2,
-      "containers": 9,
-      "expired": 1
     },
     {
       "product": "LEV/EE FC Tablet",
@@ -56,9 +80,9 @@
       "expired": 0
     },
     {
-      "product": "Placebo Film Coated Tablet",
+      "product": "Norethisterone 5mg Tablet",
       "entries": 1,
-      "containers": 1,
+      "containers": 7,
       "expired": 0
     },
     {
@@ -70,13 +94,13 @@
   ],
   "total": {
     "product": "TOTAL",
-    "entries": 44,
-    "containers": 229,
+    "entries": 60,
+    "containers": 291,
     "expired": 2
   },
   "validityBreakdown": {
     "Expired": 2,
-    "Valid": 39,
-    "N/A": 3
+    "Valid": 50,
+    "N/A": 8
   }
 }

@@ -1,6 +1,6 @@
 {
-  "lastSyncedAt": "2026-11-26T10:29:42Z",
-  "productCount": 10,
+  "lastSyncedAt": "2026-11-27T05:17:20Z",
+  "productCount": 11,
   "products": [
     {
       "productName": "Placebo of LEV/EE 5C Tablet",
@@ -10,6 +10,7 @@
       "entries": [
         {
           "sl": 1,
+          "stagingRoom": "115",
           "pageNo": 36,
           "productName": "Placebo of LEV/EE 5C Tablet",
           "batchNo": "TK0226001",
@@ -37,12 +38,13 @@
     },
     {
       "productName": "Norgestrel 0.075mg Tablet",
-      "entryCount": 7,
-      "containerCount": 37,
+      "entryCount": 8,
+      "containerCount": 43,
       "expiredCount": 0,
       "entries": [
         {
           "sl": 2,
+          "stagingRoom": "115",
           "pageNo": 12,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526063",
@@ -63,6 +65,7 @@
         },
         {
           "sl": 25,
+          "stagingRoom": "115",
           "pageNo": 79,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526103",
@@ -88,6 +91,7 @@
         },
         {
           "sl": 27,
+          "stagingRoom": "115",
           "pageNo": 81,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526104",
@@ -113,6 +117,7 @@
         },
         {
           "sl": 28,
+          "stagingRoom": "115",
           "pageNo": 82,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526105",
@@ -138,6 +143,7 @@
         },
         {
           "sl": 30,
+          "stagingRoom": "115",
           "pageNo": 83,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526106",
@@ -163,6 +169,7 @@
         },
         {
           "sl": 32,
+          "stagingRoom": "115",
           "pageNo": 84,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526107",
@@ -188,6 +195,7 @@
         },
         {
           "sl": 34,
+          "stagingRoom": "115",
           "pageNo": 85,
           "productName": "Norgestrel 0.075mg Tablet",
           "batchNo": "K0526108",
@@ -210,6 +218,32 @@
             "IPC-372",
             "IPC-520"
           ]
+        },
+        {
+          "sl": 55,
+          "stagingRoom": "126",
+          "pageNo": 34,
+          "productName": "Norgestrel 0.075mg Tablet",
+          "batchNo": "K0526102",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-128, IPC-133, IPC-163, IPC-177, IPC-316, IPC-379",
+          "noOfContainers": 6,
+          "stagingDate": "11.11.26",
+          "stagingValidity": "09.02.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 15,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180547.jpg",
+          "containerIdList": [
+            "IPC-128",
+            "IPC-133",
+            "IPC-163",
+            "IPC-177",
+            "IPC-316",
+            "IPC-379"
+          ]
         }
       ]
     },
@@ -221,6 +255,7 @@
       "entries": [
         {
           "sl": 3,
+          "stagingRoom": "115",
           "pageNo": 25,
           "productName": "Levonorgestrel 1.5mg Tablet",
           "batchNo": "K0626007",
@@ -247,12 +282,13 @@
     },
     {
       "productName": "Levothyroxine Sodium 50mcg Tablet",
-      "entryCount": 8,
-      "containerCount": 56,
+      "entryCount": 12,
+      "containerCount": 84,
       "expiredCount": 0,
       "entries": [
         {
           "sl": 4,
+          "stagingRoom": "115",
           "pageNo": 28,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926093",
@@ -279,6 +315,7 @@
         },
         {
           "sl": 5,
+          "stagingRoom": "115",
           "pageNo": 28,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926094",
@@ -305,6 +342,7 @@
         },
         {
           "sl": 6,
+          "stagingRoom": "115",
           "pageNo": 29,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926096",
@@ -331,6 +369,7 @@
         },
         {
           "sl": 7,
+          "stagingRoom": "115",
           "pageNo": 30,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926097",
@@ -357,6 +396,7 @@
         },
         {
           "sl": 36,
+          "stagingRoom": "115",
           "pageNo": 86,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926100",
@@ -383,6 +423,7 @@
         },
         {
           "sl": 37,
+          "stagingRoom": "115",
           "pageNo": 87,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926101",
@@ -409,6 +450,7 @@
         },
         {
           "sl": 40,
+          "stagingRoom": "115",
           "pageNo": 89,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926102",
@@ -435,6 +477,7 @@
         },
         {
           "sl": 43,
+          "stagingRoom": "115",
           "pageNo": 1,
           "productName": "Levothyroxine Sodium 50mcg Tablet",
           "batchNo": "K0926109",
@@ -458,17 +501,126 @@
             "IPC-510",
             "IPC-715"
           ]
+        },
+        {
+          "sl": 50,
+          "stagingRoom": "126",
+          "pageNo": 22,
+          "productName": "Levothyroxine Sodium 50mcg Tablet",
+          "batchNo": "K0926095",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-101, IPC-261, IPC-306, IPC-340, IPC-390, IPC-467, IPC-772",
+          "noOfContainers": 7,
+          "stagingDate": "18.10.26",
+          "stagingValidity": "17.12.26",
+          "validityStatus": "Valid",
+          "daysInStaging": 39,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180447.jpg",
+          "containerIdList": [
+            "IPC-101",
+            "IPC-261",
+            "IPC-306",
+            "IPC-340",
+            "IPC-390",
+            "IPC-467",
+            "IPC-772"
+          ]
+        },
+        {
+          "sl": 52,
+          "stagingRoom": "126",
+          "pageNo": 24,
+          "productName": "Levothyroxine Sodium 50mcg Tablet",
+          "batchNo": "K0926098",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-780, IPC-781, IPC-782, IPC-783, IPC-784, IPC-785, IPC-786",
+          "noOfContainers": 7,
+          "stagingDate": "20.10.26",
+          "stagingValidity": "19.12.26",
+          "validityStatus": "Valid",
+          "daysInStaging": 37,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180502.jpg",
+          "containerIdList": [
+            "IPC-780",
+            "IPC-781",
+            "IPC-782",
+            "IPC-783",
+            "IPC-784",
+            "IPC-785",
+            "IPC-786"
+          ]
+        },
+        {
+          "sl": 57,
+          "stagingRoom": "126",
+          "pageNo": 40,
+          "productName": "Levothyroxine Sodium 50mcg Tablet",
+          "batchNo": "K0926099",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-179, IPC-265, IPC-494, IPC-528, IPC-575, IPC-776, IPC-791",
+          "noOfContainers": 7,
+          "stagingDate": "23.11.26",
+          "stagingValidity": "22.01.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 3,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180613.jpg",
+          "containerIdList": [
+            "IPC-179",
+            "IPC-265",
+            "IPC-494",
+            "IPC-528",
+            "IPC-575",
+            "IPC-776",
+            "IPC-791"
+          ]
+        },
+        {
+          "sl": 60,
+          "stagingRoom": "126",
+          "pageNo": 41,
+          "productName": "Levothyroxine Sodium 50mcg Tablet",
+          "batchNo": "K0926103",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-081, IPC-115, IPC-401, IPC-422, IPC-592, IPC-626, IPC-766",
+          "noOfContainers": 7,
+          "stagingDate": "26.11.26",
+          "stagingValidity": "25.01.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 0,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180622.jpg",
+          "containerIdList": [
+            "IPC-081",
+            "IPC-115",
+            "IPC-401",
+            "IPC-422",
+            "IPC-592",
+            "IPC-626",
+            "IPC-766"
+          ]
         }
       ]
     },
     {
       "productName": "LEV/EE 5C Tablet",
-      "entryCount": 2,
-      "containerCount": 9,
+      "entryCount": 4,
+      "containerCount": 16,
       "expiredCount": 1,
       "entries": [
         {
           "sl": 8,
+          "stagingRoom": "115",
           "pageNo": 59,
           "productName": "LEV/EE 5C Tablet",
           "batchNo": "K4626035",
@@ -494,6 +646,7 @@
         },
         {
           "sl": 35,
+          "stagingRoom": "115",
           "pageNo": 85,
           "productName": "LEV/EE 5C Tablet",
           "batchNo": "K0226032",
@@ -513,17 +666,65 @@
             "IPC-439",
             "IPC-458"
           ]
+        },
+        {
+          "sl": 45,
+          "stagingRoom": "126",
+          "pageNo": 31,
+          "productName": "LEV/EE 5C Tablet",
+          "batchNo": "K0226028",
+          "itemDescription": "Blend Granules",
+          "containerIds": "IPC-429",
+          "noOfContainers": 1,
+          "stagingDate": "17.07.26",
+          "stagingValidity": "N/A",
+          "validityStatus": "N/A",
+          "daysInStaging": 132,
+          "exitDate": null,
+          "remarks": "Sample for QC analysis purpose",
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180203.jpg",
+          "containerIdList": [
+            "IPC-429"
+          ]
+        },
+        {
+          "sl": 53,
+          "stagingRoom": "126",
+          "pageNo": 31,
+          "productName": "LEV/EE 5C Tablet",
+          "batchNo": "K4626056",
+          "itemDescription": "Coated Tablet",
+          "containerIds": "IPC-111, IPC-321, IPC-423, IPC-501, IPC-544, IPC-734",
+          "noOfContainers": 6,
+          "stagingDate": "09.11.26",
+          "stagingValidity": "08.01.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 17,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180528.jpg",
+          "containerIdList": [
+            "IPC-111",
+            "IPC-321",
+            "IPC-423",
+            "IPC-501",
+            "IPC-544",
+            "IPC-734"
+          ]
         }
       ]
     },
     {
       "productName": "Sukhi TP Tablet",
-      "entryCount": 12,
-      "containerCount": 61,
+      "entryCount": 15,
+      "containerCount": 64,
       "expiredCount": 0,
       "entries": [
         {
           "sl": 9,
+          "stagingRoom": "115",
           "pageNo": 65,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826032B",
@@ -550,6 +751,7 @@
         },
         {
           "sl": 10,
+          "stagingRoom": "115",
           "pageNo": 65,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826033A",
@@ -576,6 +778,7 @@
         },
         {
           "sl": 11,
+          "stagingRoom": "115",
           "pageNo": 67,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826033B",
@@ -602,6 +805,7 @@
         },
         {
           "sl": 13,
+          "stagingRoom": "115",
           "pageNo": 69,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826039A",
@@ -628,6 +832,7 @@
         },
         {
           "sl": 15,
+          "stagingRoom": "115",
           "pageNo": 72,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826034B",
@@ -654,6 +859,7 @@
         },
         {
           "sl": 16,
+          "stagingRoom": "115",
           "pageNo": 73,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826035A",
@@ -680,6 +886,7 @@
         },
         {
           "sl": 17,
+          "stagingRoom": "115",
           "pageNo": 73,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826035B",
@@ -700,6 +907,7 @@
         },
         {
           "sl": 18,
+          "stagingRoom": "115",
           "pageNo": 73,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826035B",
@@ -720,6 +928,7 @@
         },
         {
           "sl": 38,
+          "stagingRoom": "115",
           "pageNo": 88,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826041B",
@@ -740,6 +949,7 @@
         },
         {
           "sl": 39,
+          "stagingRoom": "115",
           "pageNo": 88,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826041B",
@@ -760,6 +970,7 @@
         },
         {
           "sl": 41,
+          "stagingRoom": "115",
           "pageNo": 89,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K18260331",
@@ -787,6 +998,7 @@
         },
         {
           "sl": 42,
+          "stagingRoom": "115",
           "pageNo": 90,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K1826043A",
@@ -810,6 +1022,69 @@
             "IPC-701",
             "IPC-788"
           ]
+        },
+        {
+          "sl": 54,
+          "stagingRoom": "126",
+          "pageNo": 33,
+          "productName": "Sukhi TP Tablet",
+          "batchNo": "K1826031B",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "EQ-PR-101",
+          "noOfContainers": 1,
+          "stagingDate": "11.11.26",
+          "stagingValidity": "09.02.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 15,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180538.jpg",
+          "containerIdList": [
+            "EQ-PR-101"
+          ]
+        },
+        {
+          "sl": 58,
+          "stagingRoom": "126",
+          "pageNo": 41,
+          "productName": "Sukhi TP Tablet",
+          "batchNo": "K1826041A",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "EQ-PR-098",
+          "noOfContainers": 1,
+          "stagingDate": "24.11.26",
+          "stagingValidity": "22.02.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 2,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180622.jpg",
+          "containerIdList": [
+            "EQ-PR-098"
+          ]
+        },
+        {
+          "sl": 59,
+          "stagingRoom": "126",
+          "pageNo": 41,
+          "productName": "Sukhi TP Tablet",
+          "batchNo": "K1826041A",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "EQ-PR-168",
+          "noOfContainers": 1,
+          "stagingDate": "24.11.26",
+          "stagingValidity": "22.02.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 2,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180622.jpg",
+          "containerIdList": [
+            "EQ-PR-168"
+          ]
         }
       ]
     },
@@ -821,6 +1096,7 @@
       "entries": [
         {
           "sl": 12,
+          "stagingRoom": "115",
           "pageNo": 68,
           "productName": "Hydrocortisone Tablets, USP 20mg",
           "batchNo": "K4526001",
@@ -841,6 +1117,7 @@
         },
         {
           "sl": 14,
+          "stagingRoom": "115",
           "pageNo": 70,
           "productName": "Hydrocortisone Tablets, USP 20mg",
           "batchNo": "K4526001",
@@ -863,12 +1140,13 @@
     },
     {
       "productName": "NOR/EE Tablet",
-      "entryCount": 9,
-      "containerCount": 51,
+      "entryCount": 10,
+      "containerCount": 58,
       "expiredCount": 0,
       "entries": [
         {
           "sl": 19,
+          "stagingRoom": "115",
           "pageNo": 74,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326150",
@@ -895,6 +1173,7 @@
         },
         {
           "sl": 20,
+          "stagingRoom": "115",
           "pageNo": 75,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326151",
@@ -921,6 +1200,7 @@
         },
         {
           "sl": 22,
+          "stagingRoom": "115",
           "pageNo": 76,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326152",
@@ -941,6 +1221,7 @@
         },
         {
           "sl": 23,
+          "stagingRoom": "115",
           "pageNo": 76,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326152",
@@ -961,6 +1242,7 @@
         },
         {
           "sl": 24,
+          "stagingRoom": "115",
           "pageNo": 78,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326153",
@@ -987,6 +1269,7 @@
         },
         {
           "sl": 26,
+          "stagingRoom": "115",
           "pageNo": 80,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326155",
@@ -1013,6 +1296,7 @@
         },
         {
           "sl": 29,
+          "stagingRoom": "115",
           "pageNo": 82,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326156",
@@ -1039,6 +1323,7 @@
         },
         {
           "sl": 31,
+          "stagingRoom": "115",
           "pageNo": 83,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326157",
@@ -1065,6 +1350,7 @@
         },
         {
           "sl": 33,
+          "stagingRoom": "115",
           "pageNo": 84,
           "productName": "NOR/EE Tablet",
           "batchNo": "K0326158",
@@ -1088,6 +1374,33 @@
             "IPC-707",
             "IPC-759"
           ]
+        },
+        {
+          "sl": 56,
+          "stagingRoom": "126",
+          "pageNo": 39,
+          "productName": "NOR/EE Tablet",
+          "batchNo": "K0326154",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-158, IPC-240, IPC-483, IPC-511, IPC-549, IPC-674, IPC-718",
+          "noOfContainers": 7,
+          "stagingDate": "20.11.26",
+          "stagingValidity": "19.01.27",
+          "validityStatus": "Valid",
+          "daysInStaging": 6,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180604.jpg",
+          "containerIdList": [
+            "IPC-158",
+            "IPC-240",
+            "IPC-483",
+            "IPC-511",
+            "IPC-549",
+            "IPC-674",
+            "IPC-718"
+          ]
         }
       ]
     },
@@ -1099,6 +1412,7 @@
       "entries": [
         {
           "sl": 21,
+          "stagingRoom": "115",
           "pageNo": 76,
           "productName": "LEV/EE FC Tablet",
           "batchNo": "K0126014",
@@ -1121,12 +1435,13 @@
     },
     {
       "productName": "Placebo Film Coated Tablet",
-      "entryCount": 1,
-      "containerCount": 1,
+      "entryCount": 5,
+      "containerCount": 5,
       "expiredCount": 0,
       "entries": [
         {
           "sl": 44,
+          "stagingRoom": "115",
           "pageNo": 90,
           "productName": "Placebo Film Coated Tablet",
           "batchNo": "K4726002",
@@ -1143,6 +1458,125 @@
           "sourcePhoto": "IMG_20261126_125555.jpg",
           "containerIdList": [
             "IPC-757"
+          ]
+        },
+        {
+          "sl": 46,
+          "stagingRoom": "126",
+          "pageNo": 53,
+          "productName": "Placebo Film Coated Tablet",
+          "batchNo": "K1926015",
+          "itemDescription": "Coated Tablet",
+          "containerIds": "IPC-558",
+          "noOfContainers": 1,
+          "stagingDate": "03.08.26",
+          "stagingValidity": "N/A",
+          "validityStatus": "N/A",
+          "daysInStaging": 115,
+          "exitDate": null,
+          "remarks": "Hold Time Study Purpose",
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180248.jpg",
+          "containerIdList": [
+            "IPC-558"
+          ]
+        },
+        {
+          "sl": 47,
+          "stagingRoom": "126",
+          "pageNo": 54,
+          "productName": "Placebo Film Coated Tablet",
+          "batchNo": "K1926016",
+          "itemDescription": "Coated Tablet",
+          "containerIds": "IPC-444",
+          "noOfContainers": 1,
+          "stagingDate": "03.08.26",
+          "stagingValidity": "N/A",
+          "validityStatus": "N/A",
+          "daysInStaging": 115,
+          "exitDate": null,
+          "remarks": "Hold Time Study Purpose",
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180302.jpg",
+          "containerIdList": [
+            "IPC-444"
+          ]
+        },
+        {
+          "sl": 48,
+          "stagingRoom": "126",
+          "pageNo": 72,
+          "productName": "Placebo Film Coated Tablet",
+          "batchNo": "K1926015",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-064",
+          "noOfContainers": 1,
+          "stagingDate": "18.08.26",
+          "stagingValidity": "N/A",
+          "validityStatus": "N/A",
+          "daysInStaging": 100,
+          "exitDate": null,
+          "remarks": "Stage again after 15 days Hold time study sample",
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180343.jpg",
+          "containerIdList": [
+            "IPC-064"
+          ]
+        },
+        {
+          "sl": 49,
+          "stagingRoom": "126",
+          "pageNo": 72,
+          "productName": "Placebo Film Coated Tablet",
+          "batchNo": "K1926016",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-504",
+          "noOfContainers": 1,
+          "stagingDate": "18.08.26",
+          "stagingValidity": "N/A",
+          "validityStatus": "N/A",
+          "daysInStaging": 100,
+          "exitDate": null,
+          "remarks": "Stage again after 15 days Hold Time study sample",
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180343.jpg",
+          "containerIdList": [
+            "IPC-504"
+          ]
+        }
+      ]
+    },
+    {
+      "productName": "Norethisterone 5mg Tablet",
+      "entryCount": 1,
+      "containerCount": 7,
+      "expiredCount": 0,
+      "entries": [
+        {
+          "sl": 51,
+          "stagingRoom": "126",
+          "pageNo": 23,
+          "productName": "Norethisterone 5mg Tablet",
+          "batchNo": "K0826057",
+          "itemDescription": "Compressed Tablet",
+          "containerIds": "IPC-059, IPC-070, IPC-145, IPC-174, IPC-472, IPC-475, IPC-559",
+          "noOfContainers": 7,
+          "stagingDate": "18.10.26",
+          "stagingValidity": "17.12.26",
+          "validityStatus": "Valid",
+          "daysInStaging": 39,
+          "exitDate": null,
+          "remarks": null,
+          "note": null,
+          "sourcePhoto": "IMG_20261126_180454.jpg",
+          "containerIdList": [
+            "IPC-059",
+            "IPC-070",
+            "IPC-145",
+            "IPC-174",
+            "IPC-472",
+            "IPC-475",
+            "IPC-559"
           ]
         }
       ]

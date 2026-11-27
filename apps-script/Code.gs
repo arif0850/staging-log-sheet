@@ -26,6 +26,7 @@ function getSpreadsheet() {
 
 const HEADERS = [
   'sl',
+  'stagingRoom',
   'pageNo',
   'productName',
   'batchNo',
@@ -183,24 +184,28 @@ function buildDataset(sourceLabel) {
   if (!ws) throw new Error('Sheet "' + SHEET_NOT_EXITED + '" not found.');
 
   const lastRow = ws.getLastRow();
-  const lastCol = Math.max(ws.getLastColumn(), 15);
+  const lastCol = Math.max(ws.getLastColumn(), HEADERS.length);
   const allValues = ws.getRange(1, 1, lastRow, lastCol).getValues();
 
   const title = allValues[0] && allValues[0][0] ? String(allValues[0][0]) : 'Log Sheet for Staging Dispensed Material and Intermediate Product';
   const subtitle = allValues[1] && allValues[1][0] ? String(allValues[1][0]) : '';
-  const rawHeaders = allValues[3] ? allValues[3].slice(0, 15).map(function (h) { return String(h || ''); }) : HEADERS;
+  const rawHeaders = allValues[3] ? allValues[3].slice(0, HEADERS.length).map(function (h) { return String(h || ''); }) : HEADERS;
 
   const entries = [];
   for (var r = 4; r < allValues.length; r++) {
     var row = allValues[r];
     var sl = row[0];
-    var productName = row[2];
+    var productName = row[3];
     if ((sl === '' || sl === null) && (productName === '' || productName === null)) {
       continue;
     }
     var obj = {};
     for (var c = 0; c < HEADERS.length; c++) {
-      obj[HEADERS[c]] = formatCellValue(row[c]);
+      var val = formatCellValue(row[c]);
+      if (HEADERS[c] === 'stagingRoom' && val !== null) {
+        val = String(val);
+      }
+      obj[HEADERS[c]] = val;
     }
     var cids = obj.containerIds ? String(obj.containerIds) : '';
     obj.containerIdList = cids
@@ -209,13 +214,15 @@ function buildDataset(sourceLabel) {
     entries.push(obj);
   }
 
-  // Compute product summary & validity breakdown dynamically from entries
+  // Compute product summary, room summary & validity breakdown dynamically from entries
   var productMap = {};
+  var roomMap = {};
   var validityBreakdown = { Expired: 0, Valid: 0, 'N/A': 0 };
   var totalContainers = 0;
 
   entries.forEach(function (e) {
     var p = e.productName || 'Unknown';
+    var rm = String(e.stagingRoom || '115');
     if (!productMap[p]) {
       productMap[p] = {
         productName: p,
@@ -225,23 +232,42 @@ function buildDataset(sourceLabel) {
         entries: []
       };
     }
+    if (!roomMap[rm]) {
+      roomMap[rm] = {
+        stagingRoom: rm,
+        entryCount: 0,
+        containerCount: 0,
+        validCount: 0,
+        expiredCount: 0,
+        naCount: 0,
+        entries: []
+      };
+    }
+
     var containers = Number(e.noOfContainers) || 0;
     totalContainers += containers;
     productMap[p].entryCount += 1;
     productMap[p].containerCount += containers;
 
+    roomMap[rm].entryCount += 1;
+    roomMap[rm].containerCount += containers;
+
     var status = String(e.validityStatus || '').trim();
     if (status.toLowerCase() === 'expired') {
       productMap[p].expiredCount += 1;
+      roomMap[rm].expiredCount += 1;
       validityBreakdown.Expired += 1;
     } else if (status.toLowerCase() === 'valid') {
+      roomMap[rm].validCount += 1;
       validityBreakdown.Valid += 1;
     } else if (status.toUpperCase() === 'N/A') {
+      roomMap[rm].naCount += 1;
       validityBreakdown['N/A'] += 1;
     } else if (status) {
       validityBreakdown[status] = (validityBreakdown[status] || 0) + 1;
     }
     productMap[p].entries.push(e);
+    roomMap[rm].entries.push(e);
   });
 
   var byProduct = Object.keys(productMap)
@@ -257,8 +283,37 @@ function buildDataset(sourceLabel) {
       return b.entries - a.entries || a.product.localeCompare(b.product);
     });
 
+  var sortedRooms = Object.keys(roomMap).sort();
+  var byRoom = sortedRooms.map(function (rm) {
+    return {
+      stagingRoom: rm,
+      entries: roomMap[rm].entryCount,
+      containers: roomMap[rm].containerCount,
+      valid: roomMap[rm].validCount,
+      expired: roomMap[rm].expiredCount,
+      na: roomMap[rm].naCount
+    };
+  });
+
   var totalExpired = byProduct.reduce(function (acc, x) { return acc + x.expired; }, 0);
   var nowIso = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+  var endpointsMap = {
+    all: 'data/all.json',
+    notExited: 'data/not-exited.json',
+    summary: 'data/summary.json',
+    expired: 'data/expired.json',
+    valid: 'data/valid.json',
+    na: 'data/na.json',
+    products: 'data/products.json',
+    rooms: 'data/rooms.json',
+    meta: 'data/meta.json',
+    notExitedCsv: 'data/not-exited.csv',
+    summaryCsv: 'data/summary.csv'
+  };
+  sortedRooms.forEach(function (rm) {
+    endpointsMap['room' + rm] = 'data/room-' + rm + '.json';
+  });
 
   var meta = {
     title: title,
@@ -268,22 +323,12 @@ function buildDataset(sourceLabel) {
     source: sourceLabel || 'google-sheets-apps-script',
     spreadsheetId: ss.getId(),
     spreadsheetUrl: ss.getUrl(),
+    rooms: sortedRooms,
     totalEntries: entries.length,
     totalContainers: totalContainers,
     validityBreakdown: validityBreakdown,
     headers: rawHeaders,
-    endpoints: {
-      all: 'data/all.json',
-      notExited: 'data/not-exited.json',
-      summary: 'data/summary.json',
-      expired: 'data/expired.json',
-      valid: 'data/valid.json',
-      na: 'data/na.json',
-      products: 'data/products.json',
-      meta: 'data/meta.json',
-      notExitedCsv: 'data/not-exited.csv',
-      summaryCsv: 'data/summary.csv'
-    }
+    endpoints: endpointsMap
   };
 
   var expired = entries.filter(function (e) {
@@ -304,6 +349,7 @@ function buildDataset(sourceLabel) {
       totalEntries: entries.length,
       totalContainers: totalContainers
     },
+    byRoom: byRoom,
     byProduct: byProduct,
     total: {
       product: 'TOTAL',
@@ -320,6 +366,17 @@ function buildDataset(sourceLabel) {
     entries: entries
   };
 
+  var roomFiles = {};
+  sortedRooms.forEach(function (rm) {
+    roomFiles['data/room-' + rm + '.json'] = {
+      lastSyncedAt: nowIso,
+      stagingRoom: rm,
+      count: roomMap[rm].entryCount,
+      containerCount: roomMap[rm].containerCount,
+      entries: roomMap[rm].entries
+    };
+  });
+
   return {
     meta: meta,
     summary: summaryPayload,
@@ -333,6 +390,12 @@ function buildDataset(sourceLabel) {
       productCount: Object.keys(productMap).length,
       products: Object.keys(productMap).map(function (k) { return productMap[k]; })
     },
+    rooms: {
+      lastSyncedAt: nowIso,
+      roomCount: sortedRooms.length,
+      rooms: sortedRooms.map(function (rm) { return roomMap[rm]; })
+    },
+    roomFiles: roomFiles,
     notExitedCsv: toCsv(
       [rawHeaders.map(function (h) { return h.replace(/\r?\n/g, ' '); })].concat(
         entries.map(function (e) {
@@ -389,9 +452,13 @@ function syncToGitHub(triggerSource) {
       { path: 'data/valid.json', content: JSON.stringify(dataset.valid, null, 2) },
       { path: 'data/na.json', content: JSON.stringify(dataset.na, null, 2) },
       { path: 'data/products.json', content: JSON.stringify(dataset.products, null, 2) },
+      { path: 'data/rooms.json', content: JSON.stringify(dataset.rooms, null, 2) },
       { path: 'data/not-exited.csv', content: dataset.notExitedCsv },
       { path: 'data/summary.csv', content: dataset.summaryCsv }
     ];
+    Object.keys(dataset.roomFiles || {}).forEach(function (rmPath) {
+      files.push({ path: rmPath, content: JSON.stringify(dataset.roomFiles[rmPath], null, 2) });
+    });
 
     var baseApi = 'https://api.github.com/repos/' + owner + '/' + repo;
 
@@ -508,14 +575,31 @@ function doGet(e) {
     case 'products':
       payload = dataset.products;
       break;
+    case 'rooms':
+      payload = dataset.rooms;
+      break;
+    case 'room':
+      var rmKey = String(params.room || params.q || '').trim();
+      var rmObj = (dataset.rooms.rooms || []).filter(function (r) {
+        return String(r.stagingRoom) === rmKey;
+      })[0];
+      payload = rmObj || { stagingRoom: rmKey, entryCount: 0, containerCount: 0, entries: [] };
+      break;
     case 'not-exited':
     case 'not_exited':
+      var list = dataset.notExited.entries;
+      if (params.room) {
+        var rmFilter = String(params.room).trim();
+        list = list.filter(function (x) { return String(x.stagingRoom || '') === rmFilter; });
+      }
       if (params.status) {
         var st = params.status.toLowerCase();
-        var filtered = dataset.notExited.entries.filter(function (x) {
+        list = list.filter(function (x) {
           return String(x.validityStatus || '').toLowerCase() === st;
         });
-        payload = { count: filtered.length, status: params.status, entries: filtered };
+      }
+      if (params.room || params.status) {
+        payload = { count: list.length, room: params.room || null, status: params.status || null, entries: list };
       } else {
         payload = dataset.notExited;
       }
@@ -615,8 +699,9 @@ function bootstrapSheetFromGitHub() {
   ws.getRange(1, 1).setValue(title).setFontWeight('bold').setFontSize(13);
   ws.getRange(2, 1).setValue(subtitle).setFontColor('#555555').setFontSize(10);
 
-  var headerRange = ws.getRange(4, 1, 1, 15);
-  headerRange.setValues([rawHeaders.slice(0, 15)])
+  var colCount = HEADERS.length;
+  var headerRange = ws.getRange(4, 1, 1, colCount);
+  headerRange.setValues([rawHeaders.slice(0, colCount)])
     .setFontWeight('bold')
     .setBackground('#1e293b')
     .setFontColor('#ffffff')
@@ -629,11 +714,19 @@ function bootstrapSheetFromGitHub() {
   });
 
   if (rows.length > 0) {
-    ws.getRange(5, 1, rows.length, 15).setValues(rows);
-    // Color-code Validity Status column (col 10)
+    ws.getRange(5, 1, rows.length, colCount).setValues(rows);
+    // Color-code Staging Room (col 2) and Validity Status (col 11)
     for (var i = 0; i < rows.length; i++) {
-      var st = String(rows[i][9] || '').toLowerCase();
-      var cell = ws.getRange(5 + i, 10);
+      var rm = String(rows[i][1] || '');
+      var rmCell = ws.getRange(5 + i, 2);
+      if (rm === '126') {
+        rmCell.setBackground('#ede9fe').setFontColor('#5b21b6').setFontWeight('bold');
+      } else if (rm === '115') {
+        rmCell.setBackground('#e0f2fe').setFontColor('#075985').setFontWeight('bold');
+      }
+
+      var st = String(rows[i][10] || '').toLowerCase();
+      var cell = ws.getRange(5 + i, 11);
       if (st === 'expired') {
         cell.setBackground('#fee2e2').setFontColor('#991b1b').setFontWeight('bold');
       } else if (st === 'valid') {
@@ -644,12 +737,12 @@ function bootstrapSheetFromGitHub() {
     }
   }
   ws.setFrozenRows(4);
-  ws.autoResizeColumns(1, 15);
+  ws.autoResizeColumns(1, colCount);
 
   // 2. Setup "Summary" sheet
   var wsSum = ss.getSheetByName(SHEET_SUMMARY) || ss.insertSheet(SHEET_SUMMARY);
   wsSum.clear();
-  wsSum.getRange(1, 1).setValue('Summary — Entries Not Yet Exited').setFontWeight('bold').setFontSize(13);
+  wsSum.getRange(1, 1).setValue('Summary — Entries Not Yet Exited (Rooms 115 & 126)').setFontWeight('bold').setFontSize(13);
   wsSum.getRange(3, 1, 1, 4)
     .setValues([['Product', 'Entries', 'Containers', 'Expired (past validity)']])
     .setFontWeight('bold')
@@ -678,7 +771,21 @@ function bootstrapSheetFromGitHub() {
     ['Valid', vb.Valid || 0],
     ['N/A', vb['N/A'] || 0]
   ]);
-  wsSum.autoResizeColumns(1, 4);
+
+  var byRoom = (data.summary && data.summary.byRoom) || [];
+  if (byRoom.length > 0) {
+    var rmStart = vbStart + 5;
+    wsSum.getRange(rmStart, 1, 1, 6)
+      .setValues([['Staging Room', 'Entries', 'Containers', 'Valid', 'Expired', 'N/A']])
+      .setFontWeight('bold')
+      .setBackground('#1e293b')
+      .setFontColor('#ffffff');
+    var rmRows = byRoom.map(function (r) {
+      return ['Room ' + r.stagingRoom, r.entries, r.containers, r.valid, r.expired, r.na];
+    });
+    wsSum.getRange(rmStart + 1, 1, rmRows.length, 6).setValues(rmRows);
+  }
+  wsSum.autoResizeColumns(1, 6);
 
   return 'Bootstrapped ' + rows.length + ' entries into ' + ss.getName();
 }

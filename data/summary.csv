@@ -1,12 +1,13 @@
 Product,Entries,Containers,Expired (past validity)
-Sukhi TP Tablet,12,61,0
-NOR/EE Tablet,9,51,0
-Levothyroxine Sodium 50mcg Tablet,8,56,0
-Norgestrel 0.075mg Tablet,7,37,0
+Sukhi TP Tablet,15,64,0
+Levothyroxine Sodium 50mcg Tablet,12,84,0
+NOR/EE Tablet,10,58,0
+Norgestrel 0.075mg Tablet,8,43,0
+Placebo Film Coated Tablet,5,5,0
+LEV/EE 5C Tablet,4,16,1
 "Hydrocortisone Tablets, USP 20mg",2,2,0
-LEV/EE 5C Tablet,2,9,1
 LEV/EE FC Tablet,1,1,0
 Levonorgestrel 1.5mg Tablet,1,5,0
-Placebo Film Coated Tablet,1,1,0
+Norethisterone 5mg Tablet,1,7,0
 Placebo of LEV/EE 5C Tablet,1,6,1
-TOTAL,44,229,2
+TOTAL,60,291,2
