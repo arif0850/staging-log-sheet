@@ -2,19 +2,20 @@
   "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
   "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
   "facility": "Renata PLC, Rajendrapur Potent Product Facility",
-  "preparedDate": "27.11.2026",
-  "lastSyncedAt": "2026-11-27T06:57:50Z",
-  "source": "xlsx+camera-photos-rooms-119-126",
+  "lastSyncedAt": "2026-11-27T10:44:00Z",
+  "source": "google-sheets:sync",
+  "spreadsheetId": "1HVJLz9_5P0B8x1KnxnLdx6QdNjohN6xcKOVEB5ECDhg",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1HVJLz9_5P0B8x1KnxnLdx6QdNjohN6xcKOVEB5ECDhg/edit",
   "rooms": [
     "115",
     "119",
     "126"
   ],
-  "totalEntries": 73,
-  "totalContainers": 299,
+  "totalEntries": 72,
+  "totalContainers": 298,
   "validityBreakdown": {
     "Expired": 2,
-    "Valid": 56,
+    "Valid": 55,
     "N/A": 15
   },
   "headers": [
@@ -28,8 +29,8 @@
     "No. of Containers",
     "Staging Date",
     "Staging Validity",
-    "Validity Status\n(as of 26–27.11.2026)",
-    "Days in Staging\n(as of 26–27.11.2026)",
+    "Validity Status",
+    "Days in Staging",
     "Exit Date",
     "Remarks",
     "Note",

@@ -1,4 +1,4 @@
-SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s),No. of Containers,Staging Date,Staging Validity,Validity Status (as of 26–27.11.2026),Days in Staging (as of 26–27.11.2026),Exit Date,Remarks,Note,Source Photo
+SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s),No. of Containers,Staging Date,Staging Validity,Validity Status,Days in Staging,Exit Date,Remarks,Note,Source Photo
 1,115,36,Placebo of LEV/EE SC Tablet,TK0226001,Coated Tablet,"IPC-086, IPC-132, IPC-228, IPC-249, IPC-556, IPC-560",6,17.08.26,02.09.26,Expired,101,,,1st staging date 16.08.26. Validity written as '2/9' in sheet.,IMG_20261126_092308.jpg
 2,115,12,Norgestrel 0.075mg Tablet,K0526063,Compressed Tablet,IPC-209,1,28.09.26,N/A,N/A,59,,Sample for analysis purpose,,IMG_20261126_124503.jpg
 3,115,25,Levonorgestrel 1.5mg Tablet,K0626007,Compressed Tablet,"IPC-263, IPC-481, IPC-456, IPC-543, IPC-712",5,14.10.26,13.12.26,Valid,43,,,,IMG_20261126_124605.jpg
@@ -52,7 +52,6 @@ SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s)
 51,126,23,Norethisterone 5mg Tablet,K0826057,Compressed Tablet,"IPC-059, IPC-070, IPC-145, IPC-174, IPC-472, IPC-475, IPC-559",7,18.10.26,17.12.26,Valid,39,,,,IMG_20261126_180454.jpg
 52,126,24,Levothyroxine Sodium 50mcg Tablet,K0926098,Compressed Tablet,"IPC-780, IPC-781, IPC-782, IPC-783, IPC-784, IPC-785, IPC-786",7,20.10.26,19.12.26,Valid,37,,,,IMG_20261126_180502.jpg
 53,126,31,LEV/EE SC Tablet,K4626056,Coated Tablet,"IPC-111, IPC-321, IPC-423, IPC-501, IPC-544, IPC-734",6,09.11.26,08.01.27,Valid,17,,,,IMG_20261126_180528.jpg
-54,126,33,Sukhi TP Tablet,K1826031B,Compressed Tablet,EQ-PR-101,1,11.11.26,09.02.27,Valid,15,,,,IMG_20261126_180538.jpg
 55,126,34,Norgestrel 0.075mg Tablet,K0526102,Compressed Tablet,"IPC-128, IPC-133, IPC-163, IPC-177, IPC-316, IPC-379",6,11.11.26,09.02.27,Valid,15,,,,IMG_20261126_180547.jpg
 56,126,39,NOR/EE Tablet,K0326154,Compressed Tablet,"IPC-158, IPC-240, IPC-483, IPC-511, IPC-549, IPC-674, IPC-718",7,20.11.26,19.01.27,Valid,6,,,,IMG_20261126_180604.jpg
 57,126,40,Levothyroxine Sodium 50mcg Tablet,K0926099,Compressed Tablet,"IPC-179, IPC-265, IPC-494, IPC-528, IPC-575, IPC-776, IPC-791",7,23.11.26,22.01.27,Valid,3,,,,IMG_20261126_180613.jpg
@@ -62,13 +61,17 @@ SL,Staging Room,Page No.,Product Name,Batch No.,Item Description,Container ID(s)
 61,119,14,Thyrox 25mcg Tabs. 3x30s,Z13260131,PVDC Film 260 mm,N/A,0,29.10.26,N/A,N/A,29,,,,IMG_20261127_123234.jpg
 62,119,75,Levothyroxine Sodium 50mcg Tablet,K0926107,Blend Granules,EQ-PR-096,1,25.11.26,10.12.26,Valid,2,,,,IMG_20261127_123416.jpg
 63,119,76,Levothyroxine Sodium 50mcg Tablet,K0926108,Blend Granules,EQ-PR-095,1,25.11.26,10.12.26,Valid,2,,,,IMG_20261127_123429.jpg
-64,119,76,Sukhi TP Tablet,K18260331,PVDC film 260 mm and Printed foil 258 mm,N/A,0,25.11.26,N/A,N/A,2,,,,IMG_20261127_123429.jpg
-65,119,77,Sukhi TP Tablet,K18260341,PVDC film 260 mm and Printed foil 258 mm,N/A,0,26.11.26,N/A,N/A,1,,,,IMG_20261127_123441.jpg
+64,119,76,Sukhi TP Tablet,K18260331,"PVDC film 260 mm 
+and Printed foil 258 mm",N/A,0,25.11.26,N/A,N/A,2,,,,IMG_20261127_123429.jpg
+65,119,77,Sukhi TP Tablet,K18260341,"PVDC film 260 mm and 
+Printed foil 258 mm",N/A,0,26.11.26,N/A,N/A,1,,,,IMG_20261127_123441.jpg
 66,119,77,"Hydrocortisone Tablets, USP 20mg",K4526001,Blend Granules,EQ-PR-204,1,26.11.26,N/A,N/A,1,,Stage again after 15 days hold time study sample,,IMG_20261127_123441.jpg
 67,119,78,"Hydrocortisone Tablets, USP 20mg",K4526002,Blend Granules,EQ-PR-202,1,26.11.26,N/A,N/A,1,,Stage again after 15 days Hold time study sample,,IMG_20261127_123451.jpg
 68,119,78,Sukhi TP Tablet,K1826045A,Blend Granules,EQ-PR-156,1,26.11.26,11.12.26,Valid,1,,,,IMG_20261127_123451.jpg
-69,119,78,Sukhi TP Tablet,K18260351,PVDC film 260 mm and Printed foil 258 mm,N/A,0,26.11.26,N/A,N/A,1,,,,IMG_20261127_123451.jpg
+69,119,78,Sukhi TP Tablet,K18260351,"PVDC film 260 mm and 
+Printed foil 258 mm",N/A,0,26.11.26,N/A,N/A,1,,,,IMG_20261127_123451.jpg
 70,119,79,Levothyroxine Sodium 50mcg Tablet,K0926109,Blend Granules,EQ-PR-159,1,26.11.26,11.12.26,Valid,1,,,,IMG_20261127_123500.jpg
 71,119,79,Sukhi TP Tablet,K1826045B,Blend Granules,EQ-PR-044,1,26.11.26,11.12.26,Valid,1,,,,IMG_20261127_123500.jpg
 72,119,79,Levothyroxine Sodium 50mcg Tablet,K0926110,Blend Granules,EQ-PR-153,1,27.11.26,12.12.26,Valid,0,,,,IMG_20261127_123500.jpg
-73,119,87,Thyrox 50mcg Tablet,K09260851,PVDC Film 260 mm and Printed foil 258 mm,N/A,0,23.10.26,N/A,N/A,35,,,,IMG_20261127_123735.jpg
+73,119,87,Thyrox 50mcg Tablet,K09260851,"PVDC Film 260 mm and 
+Printed foil 258 mm",N/A,0,23.10.26,N/A,N/A,35,,,,IMG_20261127_123735.jpg

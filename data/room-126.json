@@ -1,8 +1,8 @@
 {
-  "lastSyncedAt": "2026-11-27T06:57:50Z",
+  "lastSyncedAt": "2026-11-27T10:44:00Z",
   "stagingRoom": "126",
-  "count": 16,
-  "containerCount": 62,
+  "count": 15,
+  "containerCount": 61,
   "entries": [
     {
       "sl": 45,
@@ -214,27 +214,6 @@
         "IPC-501",
         "IPC-544",
         "IPC-734"
-      ]
-    },
-    {
-      "sl": 54,
-      "stagingRoom": "126",
-      "pageNo": 33,
-      "productName": "Sukhi TP Tablet",
-      "batchNo": "K1826031B",
-      "itemDescription": "Compressed Tablet",
-      "containerIds": "EQ-PR-101",
-      "noOfContainers": 1,
-      "stagingDate": "11.11.26",
-      "stagingValidity": "09.02.27",
-      "validityStatus": "Valid",
-      "daysInStaging": 15,
-      "exitDate": null,
-      "remarks": null,
-      "note": null,
-      "sourcePhoto": "IMG_20261126_180538.jpg",
-      "containerIdList": [
-        "EQ-PR-101"
       ]
     },
     {

@@ -2,9 +2,9 @@
   "meta": {
     "title": "Log Sheet for Staging Dispensed Material and Intermediate Product",
     "subtitle": "Entries NOT yet exited  |  Rooms 115, 119 & 126  |  Renata PLC, Rajendrapur Potent Product Facility  |  Prepared 26–27.11.2026",
-    "lastSyncedAt": "2026-11-27T06:57:50Z",
-    "totalEntries": 73,
-    "totalContainers": 299
+    "lastSyncedAt": "2026-11-27T10:44:00Z",
+    "totalEntries": 72,
+    "totalContainers": 298
   },
   "byRoom": [
     {
@@ -25,9 +25,9 @@
     },
     {
       "stagingRoom": "126",
-      "entries": 16,
-      "containers": 62,
-      "valid": 11,
+      "entries": 15,
+      "containers": 61,
+      "valid": 10,
       "expired": 0,
       "na": 5
     }
@@ -35,8 +35,8 @@
   "byProduct": [
     {
       "product": "Sukhi TP Tablet",
-      "entries": 20,
-      "containers": 66,
+      "entries": 19,
+      "containers": 65,
       "expired": 0
     },
     {
@@ -114,13 +114,13 @@
   ],
   "total": {
     "product": "TOTAL",
-    "entries": 73,
-    "containers": 299,
+    "entries": 72,
+    "containers": 298,
     "expired": 2
   },
   "validityBreakdown": {
     "Expired": 2,
-    "Valid": 56,
+    "Valid": 55,
     "N/A": 15
   }
 }

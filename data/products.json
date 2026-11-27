@@ -1,5 +1,5 @@
 {
-  "lastSyncedAt": "2026-11-27T06:57:50Z",
+  "lastSyncedAt": "2026-11-27T10:44:00Z",
   "productCount": 13,
   "products": [
     {
@@ -802,8 +802,8 @@
     },
     {
       "productName": "Sukhi TP Tablet",
-      "entryCount": 20,
-      "containerCount": 66,
+      "entryCount": 19,
+      "containerCount": 65,
       "expiredCount": 0,
       "entries": [
         {
@@ -1108,27 +1108,6 @@
           ]
         },
         {
-          "sl": 54,
-          "stagingRoom": "126",
-          "pageNo": 33,
-          "productName": "Sukhi TP Tablet",
-          "batchNo": "K1826031B",
-          "itemDescription": "Compressed Tablet",
-          "containerIds": "EQ-PR-101",
-          "noOfContainers": 1,
-          "stagingDate": "11.11.26",
-          "stagingValidity": "09.02.27",
-          "validityStatus": "Valid",
-          "daysInStaging": 15,
-          "exitDate": null,
-          "remarks": null,
-          "note": null,
-          "sourcePhoto": "IMG_20261126_180538.jpg",
-          "containerIdList": [
-            "EQ-PR-101"
-          ]
-        },
-        {
           "sl": 58,
           "stagingRoom": "126",
           "pageNo": 41,
@@ -1176,7 +1155,7 @@
           "pageNo": 76,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K18260331",
-          "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+          "itemDescription": "PVDC film 260 mm \nand Printed foil 258 mm",
           "containerIds": "N/A",
           "noOfContainers": 0,
           "stagingDate": "25.11.26",
@@ -1187,7 +1166,9 @@
           "remarks": null,
           "note": null,
           "sourcePhoto": "IMG_20261127_123429.jpg",
-          "containerIdList": []
+          "containerIdList": [
+            "N/A"
+          ]
         },
         {
           "sl": 65,
@@ -1195,7 +1176,7 @@
           "pageNo": 77,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K18260341",
-          "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+          "itemDescription": "PVDC film 260 mm and \nPrinted foil 258 mm",
           "containerIds": "N/A",
           "noOfContainers": 0,
           "stagingDate": "26.11.26",
@@ -1206,7 +1187,9 @@
           "remarks": null,
           "note": null,
           "sourcePhoto": "IMG_20261127_123441.jpg",
-          "containerIdList": []
+          "containerIdList": [
+            "N/A"
+          ]
         },
         {
           "sl": 68,
@@ -1235,7 +1218,7 @@
           "pageNo": 78,
           "productName": "Sukhi TP Tablet",
           "batchNo": "K18260351",
-          "itemDescription": "PVDC film 260 mm and Printed foil 258 mm",
+          "itemDescription": "PVDC film 260 mm and \nPrinted foil 258 mm",
           "containerIds": "N/A",
           "noOfContainers": 0,
           "stagingDate": "26.11.26",
@@ -1246,7 +1229,9 @@
           "remarks": null,
           "note": null,
           "sourcePhoto": "IMG_20261127_123451.jpg",
-          "containerIdList": []
+          "containerIdList": [
+            "N/A"
+          ]
         },
         {
           "sl": 71,
@@ -1829,7 +1814,9 @@
           "remarks": null,
           "note": null,
           "sourcePhoto": "IMG_20261127_123234.jpg",
-          "containerIdList": []
+          "containerIdList": [
+            "N/A"
+          ]
         }
       ]
     },
@@ -1845,7 +1832,7 @@
           "pageNo": 87,
           "productName": "Thyrox 50mcg Tablet",
           "batchNo": "K09260851",
-          "itemDescription": "PVDC Film 260 mm and Printed foil 258 mm",
+          "itemDescription": "PVDC Film 260 mm and \nPrinted foil 258 mm",
           "containerIds": "N/A",
           "noOfContainers": 0,
           "stagingDate": "23.10.26",
@@ -1856,7 +1843,9 @@
           "remarks": null,
           "note": null,
           "sourcePhoto": "IMG_20261127_123735.jpg",
-          "containerIdList": []
+          "containerIdList": [
+            "N/A"
+          ]
         }
       ]
     }
